@@ -23,7 +23,7 @@ const Footer = () => {
             </p>
             <div className="flex items-center space-x-4">
               <a
-                href="https://web.facebook.com/people/Visit-Harar/100071139685101/?sk=photos"
+                href="https://web.facebook.com/p/Visit-Harar-100071139685101/?_rdc=1&_rdr#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
