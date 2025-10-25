@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/harar-logo.jpg";
 
@@ -20,24 +20,24 @@ const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-sm">
+    <nav className="sticky top-0 z-50 bg-white border-b border-border shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center gap-2">
-            <img src={logo} alt="Harar Logo" className="h-12 w-12 rounded-full" />
-            <span className="text-xl font-bold text-foreground">Visit Harar</span>
+        <div className="flex items-center justify-between h-20">
+          <Link to="/" className="flex items-center gap-3">
+            <img src={logo} alt="Harar Logo" className="h-14 w-14 rounded-full" />
+            <span className="text-xl font-bold text-[#2B8B8C]">Visit Harar</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center justify-center gap-8">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`px-4 py-2 rounded-md transition-colors ${
+                className={`font-opensans text-[16px] font-semibold tracking-wide transition-colors duration-200 ${
                   isActive(item.path)
-                    ? "bg-primary text-primary-foreground"
-                    : "text-foreground hover:bg-muted"
+                    ? "text-[#2B8B8C]"
+                    : "text-[#2B8B8C] hover:text-[#1E6F70]"
                 }`}
               >
                 {item.name}
@@ -49,25 +49,25 @@ const Navigation = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden text-[#2B8B8C] hover:text-[#1E6F70] hover:bg-transparent"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X /> : <Menu />}
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
           </Button>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden pb-4 space-y-2">
+          <div className="md:hidden pb-4 space-y-2 bg-white">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
                 onClick={() => setIsOpen(false)}
-                className={`block px-4 py-2 rounded-md transition-colors ${
+                className={`block px-4 py-3 font-opensans text-[16px] font-semibold tracking-wide transition-colors ${
                   isActive(item.path)
-                    ? "bg-primary text-primary-foreground"
-                    : "text-foreground hover:bg-muted"
+                    ? "text-[#2B8B8C]"
+                    : "text-[#2B8B8C] hover:text-[#1E6F70]"
                 }`}
               >
                 {item.name}
