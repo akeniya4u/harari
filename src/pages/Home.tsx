@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import HeroSection from "@/components/HeroSection";
-import heroImage from "@/assets/harar-hero.jpg";
+import heroImage from "@/assets/hero-building.jpg";
 import marketsImage from "@/assets/harar-markets.jpg";
 import culturalImage from "@/assets/cultural-experience.jpg";
 import { MapPin, Users, Building2, ArrowRight } from "lucide-react";
