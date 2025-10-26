@@ -17,17 +17,20 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 18%;
 
-    --primary: 176 56% 39%;
+    --primary: 177 56% 39%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 177 39% 52%;
+    --secondary: 177 38% 52%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 150 14% 97%;
     --muted-foreground: 0 0% 42%;
 
-    --accent: 41 63% 55%;
+    --accent: 44 100% 48%;
     --accent-foreground: 0 0% 18%;
+    
+    --text-dark: 0 0% 20%;
+    --overlay-gradient: linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.15));
 
     --destructive: 8 56% 40%;
     --destructive-foreground: 0 0% 100%;

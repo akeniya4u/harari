@@ -1,5 +1,5 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { MapPin, Clock, Phone } from "lucide-react";
+import { MapPin, Clock, Phone, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface Destination {
@@ -26,63 +26,94 @@ const DestinationDetailModal = ({ destination, open, onOpenChange }: Destination
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
-        <DialogHeader>
-          <DialogTitle className="text-3xl font-bold text-foreground">
-            {destination.name}
-          </DialogTitle>
-        </DialogHeader>
-
-        {/* Hero Image */}
-        <div className="relative h-80 w-full rounded-xl overflow-hidden">
+      <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto p-0 bg-background">
+        {/* Hero Image Header */}
+        <div className="relative h-[400px] w-full">
           <img
             src={destination.image}
             alt={destination.name}
             className="w-full h-full object-cover"
           />
-          <div className="absolute top-4 left-4">
-            <span className="px-4 py-2 rounded-full text-sm font-semibold text-white"
-              style={{ backgroundColor: 'hsl(var(--heritage-gold))' }}>
-              {destination.category}
-            </span>
+          <div 
+            className="absolute inset-0"
+            style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.1))' }}
+          />
+          
+          {/* Title Overlay */}
+          <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+            <div className="mb-3">
+              <span className="px-4 py-2 rounded-full text-sm font-semibold uppercase tracking-wide bg-primary">
+                {destination.category}
+              </span>
+            </div>
+            <h2 className="font-poppins text-4xl md:text-5xl font-bold">
+              {destination.name}
+            </h2>
           </div>
         </div>
 
-        {/* Content */}
-        <div className="space-y-6 p-2">
+        {/* Content Section */}
+        <div className="p-8 space-y-8" style={{ background: '#FFFFFF' }}>
           {/* Location & Info */}
-          <div className="flex flex-wrap gap-4 text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <MapPin className="w-5 h-5" style={{ color: 'hsl(var(--heritage-gold))' }} />
-              <span>{destination.location}</span>
+          <div className="flex flex-wrap gap-6 pb-6 border-b-2" style={{ borderColor: 'hsl(var(--accent) / 0.2)' }}>
+            <div className="flex items-center gap-3">
+              <MapPin className="w-5 h-5 text-primary" />
+              <span className="font-lato text-text-dark">{destination.location}</span>
             </div>
             {destination.visitingHours && (
-              <div className="flex items-center gap-2">
-                <Clock className="w-5 h-5" style={{ color: 'hsl(var(--heritage-gold))' }} />
-                <span>{destination.visitingHours}</span>
+              <div className="flex items-center gap-3">
+                <Clock className="w-5 h-5 text-primary" />
+                <span className="font-lato text-text-dark">{destination.visitingHours}</span>
               </div>
             )}
             {destination.contact && (
-              <div className="flex items-center gap-2">
-                <Phone className="w-5 h-5" style={{ color: 'hsl(var(--heritage-gold))' }} />
-                <span>{destination.contact}</span>
+              <div className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-primary" />
+                <span className="font-lato text-text-dark">{destination.contact}</span>
               </div>
             )}
           </div>
 
           {/* Full Description */}
           <div>
-            <h3 className="text-xl font-bold mb-3 text-foreground">About This Site</h3>
-            <p className="text-muted-foreground leading-relaxed">
+            <h3 className="font-poppins text-2xl font-bold mb-4 flex items-center gap-3 text-text-dark">
+              <span className="w-1 h-6 bg-accent rounded"></span>
+              About This Site
+            </h3>
+            <p className="font-lato text-muted-foreground leading-relaxed text-lg">
               {destination.fullDescription}
             </p>
           </div>
 
+          {/* Gallery */}
+          {destination.gallery && destination.gallery.length > 0 && (
+            <div>
+              <h3 className="font-poppins text-2xl font-bold mb-4 flex items-center gap-3 text-text-dark">
+                <span className="w-1 h-6 bg-accent rounded"></span>
+                Gallery
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {destination.gallery.map((img, idx) => (
+                  <div key={idx} className="h-48 rounded-xl overflow-hidden">
+                    <img
+                      src={img}
+                      alt={`${destination.name} ${idx + 1}`}
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Map */}
           {destination.mapEmbed && (
             <div>
-              <h3 className="text-xl font-bold mb-3 text-foreground">Location</h3>
-              <div className="w-full h-64 rounded-xl overflow-hidden">
+              <h3 className="font-poppins text-2xl font-bold mb-4 flex items-center gap-3 text-text-dark">
+                <span className="w-1 h-6 bg-accent rounded"></span>
+                Location
+              </h3>
+              <div className="w-full h-80 rounded-xl overflow-hidden shadow-lg">
                 <iframe
                   src={destination.mapEmbed}
                   width="100%"
@@ -97,33 +128,23 @@ const DestinationDetailModal = ({ destination, open, onOpenChange }: Destination
             </div>
           )}
 
-          {/* Gallery */}
-          {destination.gallery && destination.gallery.length > 0 && (
-            <div>
-              <h3 className="text-xl font-bold mb-3 text-foreground">Gallery</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                {destination.gallery.map((img, idx) => (
-                  <div key={idx} className="h-40 rounded-lg overflow-hidden">
-                    <img
-                      src={img}
-                      alt={`${destination.name} ${idx + 1}`}
-                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* CTA Button */}
-          <div className="flex justify-center pt-4">
+          {/* CTA Section */}
+          <div 
+            className="rounded-xl p-8 text-center"
+            style={{ background: 'linear-gradient(135deg, hsl(var(--primary) / 0.05) 0%, hsl(var(--accent) / 0.05) 100%)' }}
+          >
+            <h4 className="font-poppins text-xl font-bold mb-3 text-text-dark">
+              Ready to Visit?
+            </h4>
+            <p className="font-lato text-muted-foreground mb-4">
+              Contact us to arrange your visit and make the most of your time in Harar.
+            </p>
             <Button
               size="lg"
-              className="text-white font-semibold"
-              style={{ backgroundColor: 'hsl(var(--heritage-gold))' }}
+              className="bg-primary hover:bg-secondary text-white font-semibold uppercase tracking-wider"
               onClick={() => onOpenChange(false)}
             >
-              Close Details
+              Plan Your Trip
             </Button>
           </div>
         </div>

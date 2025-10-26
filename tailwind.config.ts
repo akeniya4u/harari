@@ -60,6 +60,9 @@ export default {
       },
       fontFamily: {
         opensans: ['Open Sans', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+        lato: ['Lato', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
