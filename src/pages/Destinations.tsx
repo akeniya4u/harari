@@ -1,151 +1,277 @@
-import { Badge } from "@/components/ui/badge";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
+import HeroSection from "@/components/HeroSection";
+import DestinationDetailModal from "@/components/DestinationDetailModal";
+import heroImage from "@/assets/harar-hero.jpg";
 import geyGarImage from "@/assets/museum-gey-gar.jpg";
 import rimbaudImage from "@/assets/museum-rimbaud.jpg";
 import marketsImage from "@/assets/harar-markets.jpg";
+import culturalImage from "@/assets/cultural-experience.jpg";
+import natureImage from "@/assets/nature-experience.jpg";
+
+interface Destination {
+  name: string;
+  description: string;
+  fullDescription: string;
+  image: string;
+  location: string;
+  category: string;
+  visitingHours?: string;
+  contact?: string;
+  mapEmbed?: string;
+  gallery?: string[];
+}
 
 const Destinations = () => {
-  const museums = [
-    {
-      name: "Harari Living Room (Gey Gar)",
-      description: "Experience authentic Harari home life and cultural artifacts",
-      image: geyGarImage,
-      location: "Inside Jugol Wall",
-      category: "Historical & Cultural Sites",
-    },
-    {
-      name: "House of Arthur Rimbaud",
-      description: "Historic home of the French poet who lived in Harar",
-      image: rimbaudImage,
-      location: "Central Harar",
-      category: "Historical & Cultural Sites",
-    },
-    {
-      name: "Harari National Museum",
-      description: "Collection of Harari heritage, manuscripts, and artifacts",
-      image: geyGarImage,
-      location: "Near Main Gate",
-      category: "Museums",
-    },
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [selectedDestination, setSelectedDestination] = useState<Destination | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const destinations: Destination[] = [
+    // Museums
     {
       name: "Sherif Harar City Museum",
-      description: "History of Harar's Islamic heritage and learning center",
-      image: rimbaudImage,
+      description: "History of Harar's Islamic heritage and learning center.",
+      fullDescription: "The Sherif Harar City Museum stands as a testament to Harar's rich Islamic heritage and its role as a center of Islamic learning in East Africa. The museum houses an extensive collection of Islamic manuscripts, religious artifacts, and historical documents that chronicle the city's spiritual and educational legacy. Visitors can explore exhibits showcasing the evolution of Islamic scholarship in Harar and its influence on the broader region.",
+      image: geyGarImage,
       location: "Jugol District",
       category: "Museums",
+      visitingHours: "9:00 AM - 5:00 PM",
+      mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62780.95926477595!2d42.093548!3d9.313611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1631bba6b9cc75ad%3A0x3d5c6e51c7c9a6db!2sHarar%2C%20Ethiopia!5e0!3m2!1sen!2s!4v1234567890",
+      gallery: [geyGarImage, rimbaudImage, marketsImage],
     },
     {
-      name: "Harar Museum",
-      description: "Diverse collection showcasing the city's rich traditions",
+      name: "Ada Gar Museum",
+      description: "Exhibition of Harari traditional household items and architecture.",
+      fullDescription: "Ada Gar Museum offers an intimate glimpse into traditional Harari household life. This beautifully preserved home showcases authentic Harari architecture with its distinctive colorful interiors, traditional furniture, and household items used by Harari families for generations. The museum provides visitors with a unique opportunity to understand the daily life, customs, and domestic traditions of the Harari people.",
       image: geyGarImage,
-      location: "Main Square",
+      location: "Inside Jugol Wall",
       category: "Museums",
+      visitingHours: "8:30 AM - 6:00 PM",
+      gallery: [geyGarImage, culturalImage],
     },
     {
-      name: "Harar Jegol Wall",
-      description: "Iconic 16th-century fortification with five historic gates",
+      name: "Harar National Museum",
+      description: "Collection of Harari manuscripts, heritage items, and artifacts.",
+      fullDescription: "The Harar National Museum is the premier institution preserving and displaying the cultural heritage of Harar. Its extensive collection includes rare manuscripts in Arabic and Ge'ez, traditional clothing, jewelry, weapons, and artifacts spanning centuries of Harari history. The museum offers comprehensive exhibits on Harar's unique position as a melting pot of Islamic, Ethiopian, and Somali cultures.",
       image: rimbaudImage,
-      location: "Surrounding Old City",
-      category: "Historical & Cultural Sites",
+      location: "Near Main Gate",
+      category: "Museums",
+      visitingHours: "9:00 AM - 5:30 PM",
+      gallery: [rimbaudImage, geyGarImage, marketsImage],
     },
     {
-      name: "Vibrant Markets of Harar",
-      description: "Traditional markets filled with spices, textiles, and crafts",
-      image: marketsImage,
-      location: "Various Locations",
-      category: "Local Experiences",
-    },
-    {
-      name: "Local Dishes Experience",
-      description: "Authentic Harari cuisine and traditional coffee ceremonies",
-      image: marketsImage,
-      location: "Throughout the City",
-      category: "Local Experiences",
-    },
-    {
-      name: "Harari Architecture",
-      description: "Unique traditional houses with distinctive colorful interiors",
+      name: "Amir Abdulahi Museum",
+      description: "Dedicated to the legacy of Amir Abdulahi — showcasing Harar's governance and defense history.",
+      fullDescription: "This museum honors Amir Abdulahi, one of Harar's most important historical figures. The exhibits detail the political and military history of Harar, showcasing weapons, uniforms, documents, and personal effects related to the defense and governance of the city. Visitors gain insight into the challenges faced by Harar's rulers and the strategies employed to maintain the city's independence.",
       image: geyGarImage,
+      location: "Central Harar",
+      category: "Museums",
+      visitingHours: "9:00 AM - 4:00 PM",
+      gallery: [geyGarImage, rimbaudImage],
+    },
+    {
+      name: "Arthur Rimbaud Collection Center",
+      description: "Historic home displaying collections related to the French poet Arthur Rimbaud.",
+      fullDescription: "The Arthur Rimbaud Collection Center occupies the historic house where the famous French poet lived during his time as a trader in Harar. The museum showcases Rimbaud's life in Ethiopia, his photographs, letters, and the cultural exchange between Europe and Harar during the late 19th century. It's a must-visit for literature enthusiasts and those interested in Harar's international connections.",
+      image: rimbaudImage,
+      location: "Central Harar",
+      category: "Museums",
+      visitingHours: "9:00 AM - 5:00 PM",
+      gallery: [rimbaudImage, geyGarImage, culturalImage],
+    },
+
+    // Cultural & Artistic Centers
+    {
+      name: "Aye Hajiya Sherro Harari Cultural Center",
+      description: "Celebrating Harari women's culture, clothing, and traditional home designs.",
+      fullDescription: "This cultural center is dedicated to preserving and celebrating the unique role of women in Harari culture. Exhibits showcase the intricate traditional clothing worn by Harari women, the art of Harari home decoration, and the various cultural practices passed down through generations of women. The center also hosts workshops and cultural programs highlighting women's contributions to Harari society.",
+      image: culturalImage,
       location: "Within Jugol",
-      category: "Historical & Cultural Sites",
+      category: "Cultural & Artistic Centers",
+      visitingHours: "8:00 AM - 6:00 PM",
+      gallery: [culturalImage, geyGarImage, marketsImage],
+    },
+    {
+      name: "Basketry Museum and Abdimuhaymin Gallery",
+      description: "Features Harari basket craftsmanship and traditional decorative art.",
+      fullDescription: "Harar is renowned for its distinctive basket weaving tradition, and this museum celebrates this ancient craft. The Basketry Museum displays various styles of Harari baskets, from functional household items to decorative pieces. The Abdimuhaymin Gallery showcases broader Harari decorative arts, including wall hangings, textiles, and traditional designs that have become symbols of Harari identity.",
+      image: marketsImage,
+      location: "Jugol District",
+      category: "Cultural & Artistic Centers",
+      visitingHours: "9:00 AM - 5:00 PM",
+      gallery: [marketsImage, culturalImage, geyGarImage],
+    },
+
+    // Local Experiences
+    {
+      name: "Harari Cultural Song and Dancing",
+      description: "Experience live performances of Harari music and traditional dance.",
+      fullDescription: "Immerse yourself in the vibrant sounds and movements of Harari culture through live performances of traditional music and dance. These performances showcase the unique musical traditions of Harar, featuring traditional instruments and choreography that have been preserved for generations. Performances often include audience participation and offer a joyful introduction to Harari cultural expression.",
+      image: culturalImage,
+      location: "Various Cultural Centers",
+      category: "Local Experiences",
+      visitingHours: "Evening performances - check schedule",
+      gallery: [culturalImage, geyGarImage, marketsImage],
+    },
+    {
+      name: "Hyena Feeding",
+      description: "Witness Harar's world-famous nightly hyena feeding tradition.",
+      fullDescription: "Harar is one of the few places in the world where humans and hyenas coexist peacefully. Every evening, professional hyena feeders welcome wild hyenas to the edge of town for a feeding ceremony that has become one of Harar's most famous attractions. This ancient tradition demonstrates the unique relationship between the people of Harar and these misunderstood creatures, offering visitors an unforgettable wildlife experience.",
+      image: natureImage,
+      location: "Outside City Walls",
+      category: "Local Experiences",
+      visitingHours: "7:00 PM - 9:00 PM (nightly)",
+      gallery: [natureImage, geyGarImage, culturalImage],
+    },
+    {
+      name: "Enay Abida Handcraft College",
+      description: "Local crafts training center — learn about Harari weaving, pottery, and handmade goods.",
+      fullDescription: "The Enay Abida Handcraft College is both a training institution and a living museum of Harari craftsmanship. Visitors can observe artisans at work, learning traditional techniques of weaving, pottery, basket making, and other crafts. The college offers workshops for those interested in trying their hand at these ancient arts, and a shop where visitors can purchase authentic handmade Harari goods directly from the artisans.",
+      image: marketsImage,
+      location: "Jugol District",
+      category: "Local Experiences",
+      visitingHours: "9:00 AM - 4:00 PM (Mon-Fri)",
+      gallery: [marketsImage, culturalImage, geyGarImage],
     },
   ];
 
+  const categories = ["All", "Museums", "Cultural & Artistic Centers", "Local Experiences"];
+
+  const filteredDestinations = selectedCategory === "All" 
+    ? destinations 
+    : destinations.filter(dest => dest.category === selectedCategory);
+
+  const handleViewDetails = (destination: Destination) => {
+    setSelectedDestination(destination);
+    setIsModalOpen(true);
+  };
+
   return (
-    <div className="min-h-screen py-16 bg-background">
-      <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
-            Discover Harar
-          </h1>
+    <div className="min-h-screen bg-background">
+      {/* Hero Section */}
+      <HeroSection
+        title="Explore the Living Heritage of Harar"
+        subtitle="From historic museums to vibrant cultural traditions — discover what makes Harar truly unique."
+        image={heroImage}
+      />
+
+      {/* Main Content */}
+      <div className="container mx-auto px-4 py-16">
+        {/* Page Title & Subtitle */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+            Explore Harar's Destinations
+          </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Explore the rich cultural heritage and historic sites of the ancient walled city
+            Discover the museums, cultural centers, and unique experiences that bring the ancient walled city of Harar to life.
           </p>
         </div>
 
-        {/* Destinations Grid - Image Forward Design */}
+        {/* Filter Tabs */}
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                selectedCategory === category
+                  ? "text-white shadow-lg"
+                  : "bg-white border-2 text-foreground hover:shadow-md"
+              }`}
+              style={{
+                backgroundColor: selectedCategory === category ? 'hsl(var(--heritage-gold))' : undefined,
+                borderColor: selectedCategory === category ? 'hsl(var(--heritage-gold))' : 'hsl(var(--border))',
+              }}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
+        {/* Destinations Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {museums.map((museum, index) => (
+          {filteredDestinations.map((destination, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-xl cursor-pointer transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_6px_20px_rgba(0,0,0,0.15)]"
+              className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300"
+              style={{
+                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
+              }}
             >
               {/* Image */}
-              <div className="relative h-80 overflow-hidden">
+              <div className="relative h-64 overflow-hidden">
                 <img
-                  src={museum.image}
-                  alt={museum.name}
+                  src={destination.image}
+                  alt={destination.name}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 
-                {/* Dark Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
-                
                 {/* Category Badge */}
                 <div className="absolute top-4 left-4">
-                  <Badge className="bg-primary text-white border-0 px-3 py-1 text-xs font-medium">
-                    {museum.category}
-                  </Badge>
+                  <span 
+                    className="px-3 py-1.5 rounded-full text-xs font-semibold text-white shadow-md"
+                    style={{ backgroundColor: 'hsl(var(--heritage-gold))' }}
+                  >
+                    {destination.category}
+                  </span>
                 </div>
+              </div>
 
-                {/* Content Overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-2xl font-bold text-white mb-2 leading-tight">
-                    {museum.name}
-                  </h3>
-                  <div className="flex items-center text-white/90 text-sm mb-3">
-                    <MapPin className="w-4 h-4 mr-1.5 flex-shrink-0" />
-                    <span>{museum.location}</span>
-                  </div>
-                  <p className="text-white/80 text-sm leading-relaxed line-clamp-2">
-                    {museum.description}
-                  </p>
+              {/* Content */}
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3 text-foreground leading-tight">
+                  {destination.name}
+                </h3>
+                <div className="flex items-start gap-2 mb-3 text-muted-foreground text-sm">
+                  <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" style={{ color: 'hsl(var(--heritage-gold))' }} />
+                  <span>{destination.location}</span>
                 </div>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4 line-clamp-2">
+                  {destination.description}
+                </p>
+                <Button
+                  onClick={() => handleViewDetails(destination)}
+                  className="w-full font-semibold text-white hover:opacity-90 transition-opacity"
+                  style={{ backgroundColor: 'hsl(var(--heritage-gold))' }}
+                >
+                  View Details
+                </Button>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Map Section */}
-        <div className="bg-card rounded-xl p-8 md:p-12 shadow-sm border border-border">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-foreground">
-            Location Map
-          </h2>
-          <div className="w-full h-96 rounded-xl overflow-hidden shadow-md">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62780.95926477595!2d42.093548!3d9.313611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1631bba6b9cc75ad%3A0x3d5c6e51c7c9a6db!2sHarar%2C%20Ethiopia!5e0!3m2!1sen!2s!4v1234567890"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Harar Museums Map"
-            />
-          </div>
+        {/* Decorative Pattern Section */}
+        <div 
+          className="rounded-2xl p-12 text-center"
+          style={{
+            background: 'linear-gradient(135deg, hsl(var(--heritage-beige)) 0%, hsl(var(--heritage-gold) / 0.1) 100%)',
+          }}
+        >
+          <h3 className="text-3xl font-bold mb-4 text-foreground">
+            Plan Your Visit to Harar
+          </h3>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
+            Each destination offers a unique window into Harar's rich cultural tapestry. We recommend spending at least 2-3 days to fully experience all these sites.
+          </p>
+          <Button
+            size="lg"
+            className="font-semibold text-white"
+            style={{ backgroundColor: 'hsl(var(--heritage-red))' }}
+          >
+            Contact Us for Tours
+          </Button>
         </div>
       </div>
+
+      {/* Detail Modal */}
+      <DestinationDetailModal
+        destination={selectedDestination}
+        open={isModalOpen}
+        onOpenChange={setIsModalOpen}
+      />
     </div>
   );
 };
