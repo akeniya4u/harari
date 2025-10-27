@@ -8,6 +8,11 @@ import rimbaudImage from "@/assets/museum-rimbaud.jpg";
 import marketsImage from "@/assets/harar-markets.jpg";
 import culturalImage from "@/assets/cultural-experience.jpg";
 import natureImage from "@/assets/nature-experience.jpg";
+import gateLibertyImage from "@/assets/gate-liberty.jpg";
+import gatePeaceImage from "@/assets/gate-peace.jpg";
+import gateMercyImage from "@/assets/gate-mercy.jpg";
+import gateWisdomImage from "@/assets/gate-wisdom.jpg";
+import gateVictoryImage from "@/assets/gate-victory.jpg";
 interface Destination {
   name: string;
   description: string;
@@ -19,6 +24,7 @@ interface Destination {
   contact?: string;
   mapEmbed?: string;
   gallery?: string[];
+  label?: string;
 }
 const Destinations = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
@@ -121,8 +127,59 @@ const Destinations = () => {
     category: "Local Experiences",
     visitingHours: "9:00 AM - 4:00 PM (Mon-Fri)",
     gallery: [marketsImage, culturalImage, geyGarImage]
+  },
+  // Gates
+  {
+    name: "Asu-mi Beri (Liberty Gate)",
+    description: "Gateway of exchange and freedom, where Harar's connection with Zayla symbolized openness and courage.",
+    fullDescription: "The Asu-mi Beri, also known as the Liberty Gate or Zayla Gate, stands as a powerful symbol of Harar's historical connections with the coastal city of Zayla. This eastern gateway represented the city's openness to trade, cultural exchange, and new ideas. Through this gate passed merchants, scholars, and travelers, bringing goods and knowledge from distant lands. The gate embodies the courage and adventurous spirit of the Harari people, who maintained vital trade routes despite challenging terrain and circumstances. Today, it reminds visitors of Harar's role as a crossroads of cultures and its enduring spirit of freedom and exchange.",
+    image: gateLibertyImage,
+    location: "Eastern Harar",
+    category: "Gates",
+    label: "Gate of Freedom",
+    gallery: [gateLibertyImage, heroImage, marketsImage]
+  },
+  {
+    name: "Sugutat Beri (Peace Gate)",
+    description: "A gate symbolizing harmony, once the meeting point of traders and hyenas, reflecting coexistence and peace.",
+    fullDescription: "The Sugutat Beri, or Peace Gate, is unique among Harar's five gates for its symbolism of harmony and coexistence. Located near the bustling market area, this gate has historically been a meeting point where diverse groups gathered in peace. It's particularly famous for its association with the legendary relationship between the people of Harar and the hyenas that roam the area at night. The gate represents the city's remarkable ability to maintain peace among different communities and even with the natural world. Its name and history remind visitors of the importance of harmony, understanding, and the peaceful coexistence that has defined Harar throughout the centuries.",
+    image: gatePeaceImage,
+    location: "Near Market Area",
+    category: "Gates",
+    label: "Gate of Harmony",
+    gallery: [gatePeaceImage, marketsImage, natureImage]
+  },
+  {
+    name: "Argoba Beri (Mercy Gate)",
+    description: "Named after the Argoba people, representing compassion, kinship, and Harar's welcoming spirit.",
+    fullDescription: "The Argoba Beri, or Mercy Gate, is named in honor of the Argoba people, one of the ethnic groups with deep historical ties to Harar. This northern entrance stands as a testament to the city's tradition of compassion, hospitality, and kinship. Throughout history, this gate welcomed travelers, pilgrims, and those seeking refuge, embodying the Islamic principle of mercy and the Harari value of welcoming strangers. The gate's name reflects the deep bonds between the various communities that have called Harar home and the city's reputation as a place of sanctuary. Visitors passing through this gate are reminded of Harar's enduring spirit of compassion and its role as a welcoming haven for all.",
+    image: gateMercyImage,
+    location: "Northern Entrance",
+    category: "Gates",
+    label: "Gate of Compassion",
+    gallery: [gateMercyImage, culturalImage, geyGarImage]
+  },
+  {
+    name: "Bedri Beri (Hakim Gate)",
+    description: "Honors artisans and scholars, symbolizing wisdom, skill, and resilience.",
+    fullDescription: "The Bedri Beri, also known as the Hakim Gate, celebrates the artisans and scholars who have been the backbone of Harari culture for centuries. Located on the western side of the city, this gate honors the wisdom passed down through generations of craftspeople, religious scholars, and healers (hakims). It represents the value Harar places on knowledge, craftsmanship, and the preservation of traditional skills. Through this gate, one can almost sense the centuries of learning, artistic creation, and intellectual pursuit that have made Harar a center of Islamic scholarship and traditional crafts. The gate stands as a monument to human ingenuity, the importance of education, and the resilience of cultural traditions in the face of changing times.",
+    image: gateWisdomImage,
+    location: "Western Harar",
+    category: "Gates",
+    label: "Gate of Wisdom",
+    gallery: [gateWisdomImage, rimbaudImage, marketsImage]
+  },
+  {
+    name: "Asmaadin Beri (Victory Gate)",
+    description: "Named after a saint, symbolizing victory through faith and unity.",
+    fullDescription: "The Asmaadin Beri, or Victory Gate, is named after a revered saint and stands as a powerful symbol of spiritual victory and communal unity. Located in southern Harar, this gate commemorates the city's historical triumphs achieved not through warfare alone, but through faith, solidarity, and collective determination. The gate represents the victories of the human spirit over adversity, the triumph of faith over doubt, and the power of a united community to overcome challenges. Throughout Harar's long history, this gate has witnessed celebrations of significant achievements and served as a reminder that true victory comes from spiritual strength and unity of purpose. Today, it inspires visitors to reflect on the enduring power of faith and community.",
+    image: gateVictoryImage,
+    location: "Southern Harar",
+    category: "Gates",
+    label: "Gate of Triumph",
+    gallery: [gateVictoryImage, heroImage, culturalImage]
   }];
-  const categories = ["All", "Museums", "Cultural Sites", "Local Experiences"];
+  const categories = ["All", "Museums", "Cultural Sites", "Local Experiences", "Gates"];
   const filteredDestinations = selectedCategory === "All" ? destinations : destinations.filter(dest => dest.category === selectedCategory);
   const handleViewDetails = (destination: Destination) => {
     setSelectedDestination(destination);
@@ -150,6 +207,15 @@ const Destinations = () => {
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-16">
+        {/* Gates Section Introduction */}
+        {selectedCategory === "Gates" && (
+          <div className="text-center mb-12 max-w-3xl mx-auto">
+            <p className="font-lato text-lg text-[#212121] leading-relaxed">
+              Step through the living walls of Harar Jugol and explore the Five Gates, each telling a story of courage, faith, and unity.
+            </p>
+          </div>
+        )}
+
         {/* Filter Tabs */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map(category => <button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-full font-semibold uppercase tracking-wider transition-all duration-300 ${selectedCategory === category ? "bg-primary text-white shadow-lg" : "border-2 border-primary text-primary hover:bg-secondary hover:text-white hover:border-secondary"}`}>
@@ -170,8 +236,10 @@ const Destinations = () => {
 
               {/* Category Badge */}
               <div className="absolute top-4 left-4 z-10">
-                <span className="px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide text-white bg-primary shadow-md">
-                  {destination.category}
+                <span className={`px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide text-white shadow-md ${
+                  destination.category === "Gates" ? "bg-[#4CAF50]" : "bg-primary"
+                }`}>
+                  {destination.label || destination.category}
                 </span>
               </div>
 
