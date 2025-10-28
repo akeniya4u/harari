@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import HeroSection from "@/components/HeroSection";
-import heroImage from "@/assets/hero-building.jpg";
+import heroImage from "@/assets/living-museum-hero.jpg";
 import marketsImage from "@/assets/harar-markets.jpg";
 import culturalImage from "@/assets/cultural-experience.jpg";
 import { MapPin, Users, Building2, ArrowRight } from "lucide-react";
@@ -28,13 +27,14 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
-      <HeroSection
-        title="Welcome to Harar"
-        subtitle="The City of Peace and Heritage"
-        image={heroImage}
-        ctaText="Explore Harar"
-        ctaLink="#explore"
-      />
+      {/* Fullscreen Hero Image */}
+      <section className="relative h-screen w-full">
+        <img
+          src={heroImage}
+          alt="Harar Living Museum"
+          className="w-full h-full object-cover"
+        />
+      </section>
 
       {/* About Section */}
       <section id="explore" className="py-20 container mx-auto px-4">
