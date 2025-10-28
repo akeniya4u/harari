@@ -3,6 +3,10 @@ import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
 import DestinationDetailModal from "@/components/DestinationDetailModal";
 import heroImage from "@/assets/harar-hero.jpg";
+import museumSherifImage from "@/assets/museum-sherif.jpg";
+import museumAdaGarImage from "@/assets/museum-ada-gar.jpg";
+import museumHararImage from "@/assets/museum-harar-living.jpg";
+import museumArthurImage from "@/assets/museum-arthur.jpg";
 import geyGarImage from "@/assets/museum-gey-gar.jpg";
 import rimbaudImage from "@/assets/museum-rimbaud.jpg";
 import marketsImage from "@/assets/harar-markets.jpg";
@@ -36,48 +40,39 @@ const Destinations = () => {
     name: "Sherif Harar City Museum",
     description: "History of Harar's Islamic heritage and learning center.",
     fullDescription: "The Sherif Harar City Museum stands as a testament to Harar's rich Islamic heritage and its role as a center of Islamic learning in East Africa. The museum houses an extensive collection of Islamic manuscripts, religious artifacts, and historical documents that chronicle the city's spiritual and educational legacy. Visitors can explore exhibits showcasing the evolution of Islamic scholarship in Harar and its influence on the broader region.",
-    image: geyGarImage,
+    image: museumSherifImage,
     location: "Jugol District",
     category: "Museums",
     visitingHours: "9:00 AM - 5:00 PM",
     mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62780.95926477595!2d42.093548!3d9.313611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1631bba6b9cc75ad%3A0x3d5c6e51c7c9a6db!2sHarar%2C%20Ethiopia!5e0!3m2!1sen!2s!4v1234567890",
-    gallery: [geyGarImage, rimbaudImage, marketsImage]
+    gallery: [museumSherifImage, geyGarImage, marketsImage]
   }, {
     name: "Ada Gar Museum",
     description: "Exhibition of Harari traditional household items and architecture.",
     fullDescription: "Ada Gar Museum offers an intimate glimpse into traditional Harari household life. This beautifully preserved home showcases authentic Harari architecture with its distinctive colorful interiors, traditional furniture, and household items used by Harari families for generations. The museum provides visitors with a unique opportunity to understand the daily life, customs, and domestic traditions of the Harari people.",
-    image: geyGarImage,
+    image: museumAdaGarImage,
     location: "Inside Jugol Wall",
     category: "Museums",
     visitingHours: "8:30 AM - 6:00 PM",
-    gallery: [geyGarImage, culturalImage]
+    gallery: [museumAdaGarImage, culturalImage]
   }, {
     name: "Harar National Museum",
     description: "Collection of Harari manuscripts, heritage items, and artifacts.",
     fullDescription: "The Harar National Museum is the premier institution preserving and displaying the cultural heritage of Harar. Its extensive collection includes rare manuscripts in Arabic and Ge'ez, traditional clothing, jewelry, weapons, and artifacts spanning centuries of Harari history. The museum offers comprehensive exhibits on Harar's unique position as a melting pot of Islamic, Ethiopian, and Somali cultures.",
-    image: rimbaudImage,
+    image: museumHararImage,
     location: "Near Main Gate",
     category: "Museums",
     visitingHours: "9:00 AM - 5:30 PM",
-    gallery: [rimbaudImage, geyGarImage, marketsImage]
-  }, {
-    name: "Amir Abdulahi Museum",
-    description: "Dedicated to the legacy of Amir Abdulahi — showcasing Harar's governance and defense history.",
-    fullDescription: "This museum honors Amir Abdulahi, one of Harar's most important historical figures. The exhibits detail the political and military history of Harar, showcasing weapons, uniforms, documents, and personal effects related to the defense and governance of the city. Visitors gain insight into the challenges faced by Harar's rulers and the strategies employed to maintain the city's independence.",
-    image: geyGarImage,
-    location: "Central Harar",
-    category: "Museums",
-    visitingHours: "9:00 AM - 4:00 PM",
-    gallery: [geyGarImage, rimbaudImage]
+    gallery: [museumHararImage, geyGarImage, marketsImage]
   }, {
     name: "Arthur Rimbaud Collection Center",
     description: "Historic home displaying collections related to the French poet Arthur Rimbaud.",
     fullDescription: "The Arthur Rimbaud Collection Center occupies the historic house where the famous French poet lived during his time as a trader in Harar. The museum showcases Rimbaud's life in Ethiopia, his photographs, letters, and the cultural exchange between Europe and Harar during the late 19th century. It's a must-visit for literature enthusiasts and those interested in Harar's international connections.",
-    image: rimbaudImage,
+    image: museumArthurImage,
     location: "Central Harar",
     category: "Museums",
     visitingHours: "9:00 AM - 5:00 PM",
-    gallery: [rimbaudImage, geyGarImage, culturalImage]
+    gallery: [museumArthurImage, rimbaudImage, culturalImage]
   },
   // Cultural & Artistic Centers
   {
@@ -231,7 +226,7 @@ const Destinations = () => {
               
               {/* Overlay Gradient */}
               <div className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-80" style={{
-            background: 'linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.15))'
+            background: 'linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.7) 100%)'
           }} />
 
               {/* Category Badge */}
@@ -269,7 +264,7 @@ const Destinations = () => {
           <p className="font-lato text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
             Each destination offers a unique window into Harar's rich cultural tapestry. We recommend spending at least 2-3 days to fully experience all these sites.
           </p>
-          <Button size="lg" className="uppercase tracking-wider font-semibold bg-[#1f5469] text-slate-100">
+          <Button size="lg" className="bg-primary hover:bg-secondary text-white font-semibold uppercase tracking-wider transition-all duration-300 rounded-lg shadow-[0_4px_10px_rgba(0,0,0,0.1)]">
             Contact Us for Tours
           </Button>
         </div>
