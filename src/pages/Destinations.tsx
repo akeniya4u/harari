@@ -12,6 +12,10 @@ import rimbaudImage from "@/assets/museum-rimbaud.jpg";
 import marketsImage from "@/assets/harar-markets.jpg";
 import culturalImage from "@/assets/cultural-experience.jpg";
 import natureImage from "@/assets/nature-experience.jpg";
+import culturalSongDanceImage from "@/assets/cultural-song-dance.jpg";
+import hyenaFeedingImage from "@/assets/hyena-feeding.jpg";
+import ayeHajiyaCenterImage from "@/assets/aye-hajiya-center.jpg";
+import basketryMuseumImage from "@/assets/basketry-museum.jpg";
 import gateLibertyImage from "@/assets/gate-liberty.jpg";
 import gatePeaceImage from "@/assets/gate-peace.jpg";
 import gateMercyImage from "@/assets/gate-mercy.jpg";
@@ -79,49 +83,40 @@ const Destinations = () => {
     name: "Aye Hajiya Sherro Harari Cultural Center",
     description: "Celebrating Harari women's culture, clothing, and traditional home designs.",
     fullDescription: "This cultural center is dedicated to preserving and celebrating the unique role of women in Harari culture. Exhibits showcase the intricate traditional clothing worn by Harari women, the art of Harari home decoration, and the various cultural practices passed down through generations of women. The center also hosts workshops and cultural programs highlighting women's contributions to Harari society.",
-    image: culturalImage,
+    image: ayeHajiyaCenterImage,
     location: "Within Jugol",
     category: "Cultural Sites",
     visitingHours: "8:00 AM - 6:00 PM",
-    gallery: [culturalImage, geyGarImage, marketsImage]
+    gallery: [ayeHajiyaCenterImage, geyGarImage, marketsImage]
   }, {
     name: "Basketry Museum and Abdimuhaymin Gallery",
     description: "Features Harari basket craftsmanship and traditional decorative art.",
     fullDescription: "Harar is renowned for its distinctive basket weaving tradition, and this museum celebrates this ancient craft. The Basketry Museum displays various styles of Harari baskets, from functional household items to decorative pieces. The Abdimuhaymin Gallery showcases broader Harari decorative arts, including wall hangings, textiles, and traditional designs that have become symbols of Harari identity.",
-    image: marketsImage,
+    image: basketryMuseumImage,
     location: "Jugol District",
     category: "Cultural Sites",
     visitingHours: "9:00 AM - 5:00 PM",
-    gallery: [marketsImage, culturalImage, geyGarImage]
+    gallery: [basketryMuseumImage, culturalImage, geyGarImage]
   },
   // Local Experiences
   {
     name: "Harari Cultural Song and Dancing",
     description: "Experience live performances of Harari music and traditional dance.",
     fullDescription: "Immerse yourself in the vibrant sounds and movements of Harari culture through live performances of traditional music and dance. These performances showcase the unique musical traditions of Harar, featuring traditional instruments and choreography that have been preserved for generations. Performances often include audience participation and offer a joyful introduction to Harari cultural expression.",
-    image: culturalImage,
+    image: culturalSongDanceImage,
     location: "Various Cultural Centers",
     category: "Local Experiences",
     visitingHours: "Evening performances - check schedule",
-    gallery: [culturalImage, geyGarImage, marketsImage]
+    gallery: [culturalSongDanceImage, geyGarImage, marketsImage]
   }, {
     name: "Hyena Feeding",
     description: "Witness Harar's world-famous nightly hyena feeding tradition.",
     fullDescription: "Harar is one of the few places in the world where humans and hyenas coexist peacefully. Every evening, professional hyena feeders welcome wild hyenas to the edge of town for a feeding ceremony that has become one of Harar's most famous attractions. This ancient tradition demonstrates the unique relationship between the people of Harar and these misunderstood creatures, offering visitors an unforgettable wildlife experience.",
-    image: natureImage,
+    image: hyenaFeedingImage,
     location: "Outside City Walls",
     category: "Local Experiences",
     visitingHours: "7:00 PM - 9:00 PM (nightly)",
-    gallery: [natureImage, geyGarImage, culturalImage]
-  }, {
-    name: "Enay Abida Handcraft College",
-    description: "Local crafts training center — learn about Harari weaving, pottery, and handmade goods.",
-    fullDescription: "The Enay Abida Handcraft College is both a training institution and a living museum of Harari craftsmanship. Visitors can observe artisans at work, learning traditional techniques of weaving, pottery, basket making, and other crafts. The college offers workshops for those interested in trying their hand at these ancient arts, and a shop where visitors can purchase authentic handmade Harari goods directly from the artisans.",
-    image: marketsImage,
-    location: "Jugol District",
-    category: "Local Experiences",
-    visitingHours: "9:00 AM - 4:00 PM (Mon-Fri)",
-    gallery: [marketsImage, culturalImage, geyGarImage]
+    gallery: [hyenaFeedingImage, geyGarImage, culturalImage]
   },
   // Gates
   {
