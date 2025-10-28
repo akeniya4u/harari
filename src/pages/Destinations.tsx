@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import DestinationDetailModal from "@/components/DestinationDetailModal";
-import heroImage from "@/assets/harar-hero.jpg";
+import heroImage from "@/assets/i-love-harar.jpg";
 import museumSherifImage from "@/assets/museum-sherif.jpg";
 import museumAdaGarImage from "@/assets/museum-ada-gar.jpg";
 import museumHararImage from "@/assets/museum-harar-living.jpg";
@@ -35,6 +36,7 @@ interface Destination {
   label?: string;
 }
 const Destinations = () => {
+  const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [selectedDestination, setSelectedDestination] = useState<Destination | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -189,8 +191,12 @@ const Destinations = () => {
           <p className="font-lato text-xl md:text-2xl text-white/95 max-w-2xl mb-8">
             Step into centuries of culture, history, and living tradition.
           </p>
-          <Button size="lg" className="bg-primary hover:bg-secondary text-white font-semibold uppercase tracking-wider transition-all duration-300">
-            Explore More
+          <Button 
+            size="lg" 
+            onClick={() => navigate('/plan-your-trip')}
+            className="bg-[#2B9A94] hover:bg-[#56B3AE] text-white font-semibold uppercase tracking-wider transition-all duration-300 rounded-lg shadow-lg"
+          >
+            Plan Your Trip
           </Button>
         </div>
       </div>
@@ -208,26 +214,26 @@ const Destinations = () => {
 
         {/* Filter Tabs */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map(category => <button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-full font-semibold uppercase tracking-wider transition-all duration-300 ${selectedCategory === category ? "bg-primary text-white shadow-lg" : "border-2 border-primary text-primary hover:bg-secondary hover:text-white hover:border-secondary"}`}>
+          {categories.map(category => <button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-full font-semibold uppercase tracking-wider transition-all duration-300 ${selectedCategory === category ? "bg-[#2B9A94] text-white shadow-lg" : "border-2 border-[#2B9A94] text-[#2B9A94] hover:bg-[#56B3AE] hover:text-white hover:border-[#56B3AE]"}`}>
               {category}
             </button>)}
         </div>
 
         {/* Destinations Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {filteredDestinations.map((destination, index) => <div key={index} className="group relative h-[400px] rounded-xl overflow-hidden cursor-pointer transition-all duration-500 hover:shadow-[0_6px_20px_rgba(0,0,0,0.15)] hover:-translate-y-1" onClick={() => handleViewDetails(destination)}>
+          {filteredDestinations.map((destination, index) => <div key={index} className="group relative h-[400px] rounded-xl overflow-hidden cursor-pointer transition-all duration-500 hover:shadow-[0_6px_20px_rgba(0,0,0,0.15)] hover:scale-[1.03]" onClick={() => handleViewDetails(destination)}>
               {/* Background Image */}
               <img src={destination.image} alt={destination.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
               
               {/* Overlay Gradient */}
-              <div className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-80" style={{
+              <div className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-90" style={{
             background: 'linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.7) 100%)'
           }} />
 
               {/* Category Badge */}
               <div className="absolute top-4 left-4 z-10">
                 <span className={`px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide text-white shadow-md ${
-                  destination.category === "Gates" ? "bg-[#4CAF50]" : "bg-primary"
+                  destination.category === "Gates" ? "bg-[#2B9A94]" : "bg-[#2B9A94]"
                 }`}>
                   {destination.label || destination.category}
                 </span>
@@ -235,14 +241,14 @@ const Destinations = () => {
 
               {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white z-10">
-                <h3 className="font-poppins text-2xl font-bold mb-2 leading-tight">
+                <h3 className="font-poppins text-2xl font-bold mb-2 leading-tight drop-shadow-lg">
                   {destination.name}
                 </h3>
-                <div className="flex items-start gap-2 mb-3 text-white/90">
-                  <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                  <span className="font-lato text-sm">{destination.location}</span>
+                <div className="flex items-start gap-2 mb-3 text-white">
+                  <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5 drop-shadow-md" />
+                  <span className="font-lato text-sm drop-shadow-md">{destination.location}</span>
                 </div>
-                <p className="font-lato text-sm leading-relaxed text-white/85 line-clamp-2">
+                <p className="font-lato text-sm leading-relaxed text-white/90 line-clamp-2 drop-shadow-md">
                   {destination.description}
                 </p>
               </div>
@@ -250,18 +256,29 @@ const Destinations = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="rounded-2xl p-12 text-center" style={{
-        background: 'linear-gradient(135deg, hsl(var(--muted)) 0%, hsl(var(--primary) / 0.1) 100%)'
-      }}>
-          <h3 className="font-poppins text-3xl font-bold mb-4 text-foreground">
+        <div className="rounded-2xl p-12 text-center bg-gradient-to-br from-[#2B9A94]/10 to-[#56B3AE]/5">
+          <h3 className="font-poppins text-3xl font-bold mb-4 text-[#212121]">
             Plan Your Visit to Harar
           </h3>
-          <p className="font-lato text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
+          <p className="font-lato text-lg text-[#212121]/80 max-w-2xl mx-auto mb-8">
             Each destination offers a unique window into Harar's rich cultural tapestry. We recommend spending at least 2-3 days to fully experience all these sites.
           </p>
-          <Button size="lg" className="bg-primary hover:bg-secondary text-white font-semibold uppercase tracking-wider transition-all duration-300 rounded-lg shadow-[0_4px_10px_rgba(0,0,0,0.1)]">
-            Contact Us for Tours
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button 
+              size="lg" 
+              onClick={() => navigate('/plan-your-trip')}
+              className="bg-[#2B9A94] hover:bg-[#56B3AE] text-white font-semibold uppercase tracking-wider transition-all duration-300 rounded-lg shadow-[0_4px_10px_rgba(0,0,0,0.1)] w-full sm:w-auto"
+            >
+              Plan Your Trip
+            </Button>
+            <Button 
+              size="lg" 
+              onClick={() => navigate('/contact')}
+              className="bg-[#2B9A94] hover:bg-[#56B3AE] text-white font-semibold uppercase tracking-wider transition-all duration-300 rounded-lg shadow-[0_4px_10px_rgba(0,0,0,0.1)] w-full sm:w-auto"
+            >
+              Contact Us for Tours
+            </Button>
+          </div>
         </div>
       </div>
 
