@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Facebook, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Mail, Phone, MapPin, Instagram } from "lucide-react";
 
 const Footer = () => {
   const quickLinks = [
@@ -27,8 +27,18 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Visit our Facebook page"
               >
                 <Facebook size={24} />
+              </a>
+              <a
+                href="https://www.instagram.com/visitharar/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Follow us on Instagram"
+              >
+                <Instagram size={24} />
               </a>
             </div>
           </div>

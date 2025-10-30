@@ -3,10 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import HeroSection from "@/components/HeroSection";
 import heroImage from "@/assets/hero-building.jpg";
-import marketsImage from "@/assets/harar-markets.jpg";
-import culturalImage from "@/assets/cultural-experience.jpg";
+import traditionalCraftsImage from "@/assets/traditional-crafts.jpg";
+import culturalGatheringImage from "@/assets/cultural-gathering.jpg";
 import gateWisdomImage from "@/assets/gate-wisdom.jpg";
-import museumImage from "@/assets/museum-rimbaud.jpg";
 import { MapPin, Users, Building2, ArrowRight, Landmark, Coins, Shield, Globe } from "lucide-react";
 const Home = () => {
   const features = [{
@@ -155,8 +154,8 @@ const Home = () => {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="relative h-96 rounded-2xl overflow-hidden group shadow-elegant">
               <img 
-                src={marketsImage} 
-                alt="Vibrant Markets of Harar" 
+                src={traditionalCraftsImage} 
+                alt="Traditional Harari Crafts and Basketry" 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/85 to-transparent flex items-end p-8">
@@ -169,8 +168,8 @@ const Home = () => {
 
             <div className="relative h-96 rounded-2xl overflow-hidden group shadow-elegant">
               <img 
-                src={culturalImage} 
-                alt="Cultural Traditions" 
+                src={culturalGatheringImage} 
+                alt="Cultural Gathering in Harar" 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/85 to-transparent flex items-end p-8">
