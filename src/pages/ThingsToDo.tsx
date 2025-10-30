@@ -1,8 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import natureImage from "@/assets/nature-experience.jpg";
-import culturalImage from "@/assets/cultural-experience.jpg";
-import marketsImage from "@/assets/harar-markets.jpg";
-import museumImage from "@/assets/museum-gey-gar.jpg";
+import natureImage from "@/assets/harar-alleyway-night.jpg";
+import culturalImage from "@/assets/harari-women-ceremony.jpg";
+import marketsImage from "@/assets/hyena-feeding-night.jpg";
+import museumImage from "@/assets/city-peace-alleyway.jpg";
 import { Compass, Users, Mountain, BookOpen } from "lucide-react";
 
 const ThingsToDo = () => {
