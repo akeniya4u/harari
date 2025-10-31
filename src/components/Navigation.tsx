@@ -1,20 +1,23 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 import logo from "@/assets/harar-logo.jpg";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
 
   const navItems = [
-    { name: "Home", path: "/" },
-    { name: "Destinations", path: "/destinations" },
-    { name: "Things To Do", path: "/things-to-do" },
-    { name: "Invest in Harar", path: "/invest" },
-    { name: "Plan Your Trip", path: "/plan-your-trip" },
-    { name: "Contact Us", path: "/contact" },
+    { name: t('nav.home'), path: "/" },
+    { name: t('nav.destinations'), path: "/destinations" },
+    { name: t('nav.thingsToDo'), path: "/things-to-do" },
+    { name: t('nav.invest'), path: "/invest" },
+    { name: t('nav.planTrip'), path: "/plan-your-trip" },
+    { name: t('nav.contact'), path: "/contact" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -43,17 +46,21 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden text-[#2B8B8C] hover:text-[#1E6F70] hover:bg-transparent"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </Button>
+          <div className="flex items-center gap-2 md:hidden">
+            <LanguageSwitcher />
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-[#2B8B8C] hover:text-[#1E6F70] hover:bg-transparent"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}

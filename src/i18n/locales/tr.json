@@ -1,0 +1,101 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "destinations": "Destinasyonlar",
+    "thingsToDo": "Yapılacak Şeyler",
+    "invest": "Harar'a Yatırım Yapın",
+    "planTrip": "Seyahatinizi Planlayın",
+    "contact": "İletişim"
+  },
+  "home": {
+    "heroTitle": "Antik Surlu Şehir Harar'ı Keşfedin",
+    "heroSubtitle": "UNESCO Dünya Mirası ve Etiyopya'nın Dördüncü Kutsal Şehri",
+    "exploreCTA": "Harar'ı Keşfedin",
+    "planCTA": "Seyahatinizi Planlayın"
+  },
+  "destinations": {
+    "title": "Harar'ın Tarihi Destinasyonlarını Keşfedin",
+    "subtitle": "Harar'ı benzersiz kılan antik kapıları, müzeleri ve kültürel simgeleri keşfedin"
+  },
+  "thingsToDo": {
+    "title": "Harar'da Yapılacak Şeyler",
+    "subtitle": "Sizi bekleyen zengin kültürü, tarihi ve macerayı deneyimleyin",
+    "nature": "Doğa Deneyimi",
+    "natureDesc": "Harar'ı çevreleyen doğal güzelliği ve manzaraları keşfedin",
+    "cultural": "Kültürel Deneyim",
+    "culturalDesc": "Harar'ın zengin geleneklerine ve mirasına dalın",
+    "outdoor": "Açık Hava ve Macera",
+    "outdoorDesc": "Heyecan verici maceraları ve açık hava etkinliklerini deneyimleyin",
+    "educational": "Araştırma ve Eğitim Seyahati",
+    "educationalDesc": "Harar'ın akademik ve tarihi önemini keşfedin",
+    "findGuide": "Kişiselleştirilmiş bir tur mu arıyorsunuz?",
+    "findGuideDesc": "Harar'ı keşfetmenize yardımcı olacak deneyimli tur rehberleri bulun",
+    "findGuideBtn": "Tur Rehberi Bulun"
+  },
+  "invest": {
+    "title": "Harar'a Yatırım Yapın",
+    "subtitle": "Afrika'nın en tarihi ve kültürel açıdan zengin şehirlerinden birinde yatırım fırsatlarını keşfedin",
+    "whyInvest": "Neden Harar'a Yatırım Yapmalı?",
+    "growingTourism": "Büyüyen Turizm",
+    "growingTourismDesc": "Dünya çapında ziyaretçileri çeken UNESCO Dünya Mirası",
+    "safeDest": "Güvenli Destinasyon",
+    "safeDestDesc": "Uluslararası yatırımı memnuniyetle karşılayan barışçıl topluluk",
+    "culturalRich": "Kültürel Zenginlik",
+    "culturalRichDesc": "Etiyopya ve İslam mirasının benzersiz karışımı",
+    "strategicLoc": "Stratejik Konum",
+    "strategicLocDesc": "Artan bağlantıya sahip Afrika Boynuzu'na açılan kapı",
+    "sectors": "Yatırım Sektörleri",
+    "hospitality": "Konaklama ve Turizm",
+    "hospitalityDesc": "Artan ziyaretçi sayısını karşılamak için oteller, pansiyonlar ve turistik tesisler",
+    "culturalTourism": "Kültürel Turizm",
+    "culturalTourismDesc": "Tur operasyonları, kültür merkezleri ve miras koruma projeleri",
+    "foodBev": "Yiyecek ve İçecek",
+    "foodBevDesc": "Geleneksel Harar mutfağını ve kahve kültürünü sergileyen restoranlar",
+    "artsCrafts": "Sanat ve El Sanatları",
+    "artsCraftsDesc": "Geleneksel sepet örücülüğü, dokuma ve el sanatları üretimi ve perakendesi",
+    "expressInterest": "İlginizi Belirtin",
+    "name": "Ad",
+    "email": "E-posta",
+    "phone": "Telefon Numarası",
+    "investmentType": "Yatırım Türü",
+    "selectType": "Yatırım türü seçin",
+    "message": "Mesaj",
+    "tellUs": "Yatırım ilgi alanlarınız hakkında bize bilgi verin",
+    "submit": "İlgi Gönderin",
+    "successMsg": "İlginiz için teşekkür ederiz! Yakında sizinle iletişime geçeceğiz."
+  },
+  "planTrip": {
+    "title": "Harar Seyahatinizi Planlayın",
+    "subtitle": "Harar ziyaretinizi unutulmaz kılmak için ihtiyacınız olan her şey",
+    "all": "Tümü",
+    "hotels": "Oteller",
+    "guestHouses": "Pansiyonlar",
+    "carRental": "Araç Kiralama",
+    "tourGuides": "Tur Rehberleri",
+    "needAssistance": "Kişisel Yardıma İhtiyacınız Var mı?",
+    "assistanceDesc": "Ekibimiz Harar'a mükemmel bir gezi planlamanıza yardımcı olmak için burada",
+    "contactUs": "Bize Ulaşın"
+  },
+  "contact": {
+    "title": "İletişime Geçin",
+    "subtitle": "Sizden haber almak isteriz. Bize bir mesaj gönderin, en kısa sürede yanıt vereceğiz.",
+    "formTitle": "Bize Mesaj Gönderin",
+    "name": "Ad",
+    "email": "E-posta",
+    "message": "Mesaj",
+    "send": "Mesaj Gönder",
+    "info": "İletişim Bilgileri",
+    "successMsg": "Mesaj başarıyla gönderildi! En kısa sürede size geri döneceğiz."
+  },
+  "footer": {
+    "tagline": "Antik surlu şehir Harar'ı keşfedin",
+    "quickLinks": "Hızlı Bağlantılar",
+    "followUs": "Bizi Takip Edin",
+    "rights": "Tüm hakları saklıdır."
+  },
+  "common": {
+    "learnMore": "Daha Fazla Bilgi",
+    "close": "Kapat",
+    "viewDetails": "Detayları Görüntüle"
+  }
+}

@@ -2,8 +2,11 @@ import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useTranslation } from "react-i18next";
 import { Phone, Mail, Car, Hotel, Home, User } from "lucide-react";
+
 const PlanYourTrip = () => {
+  const { t } = useTranslation();
   const hotels = [{
     name: "Ras Hotel",
     phone: "+251912000111"
@@ -76,20 +79,20 @@ const PlanYourTrip = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-4">Plan Your Trip to Harar</h1>
+          <h1 className="text-5xl font-bold mb-4">{t('planTrip.title')}</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Everything you need for a comfortable and memorable stay in Harar. From accommodations to transportation and expert guides.
+            {t('planTrip.subtitle')}
           </p>
         </div>
 
         {/* Tabs for Categories */}
         <Tabs defaultValue="all" className="w-full">
           <TabsList className="grid w-full grid-cols-2 lg:grid-cols-5 mb-8">
-            <TabsTrigger value="all">All</TabsTrigger>
-            <TabsTrigger value="hotels">Hotels</TabsTrigger>
-            <TabsTrigger value="guesthouses">Guest Houses</TabsTrigger>
-            <TabsTrigger value="car">Car Rental</TabsTrigger>
-            <TabsTrigger value="guides">Tour Guides</TabsTrigger>
+            <TabsTrigger value="all">{t('planTrip.all')}</TabsTrigger>
+            <TabsTrigger value="hotels">{t('planTrip.hotels')}</TabsTrigger>
+            <TabsTrigger value="guesthouses">{t('planTrip.guestHouses')}</TabsTrigger>
+            <TabsTrigger value="car">{t('planTrip.carRental')}</TabsTrigger>
+            <TabsTrigger value="guides">{t('planTrip.tourGuides')}</TabsTrigger>
           </TabsList>
 
           {/* All Tab */}

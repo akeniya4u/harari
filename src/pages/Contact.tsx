@@ -5,9 +5,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
+import { useTranslation } from "react-i18next";
 import { Mail, Phone, MapPin, MessageSquare } from "lucide-react";
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -16,7 +18,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Message sent! We'll get back to you soon.");
+    toast.success(t('contact.successMsg'));
     setFormData({ name: "", email: "", message: "" });
   };
 
@@ -46,9 +48,9 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-4">Contact Us</h1>
+          <h1 className="text-5xl font-bold mb-4">{t('contact.title')}</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Have questions about visiting Harar? We're here to help plan your perfect journey to this historic city.
+            {t('contact.subtitle')}
           </p>
         </div>
 
@@ -58,7 +60,7 @@ const Contact = () => {
             <CardHeader>
               <CardTitle className="text-3xl flex items-center">
                 <MessageSquare className="mr-3 text-primary" />
-                Send Us a Message
+                {t('contact.formTitle')}
               </CardTitle>
               <CardDescription>
                 Fill out the form below and we'll respond as soon as possible.
@@ -67,7 +69,7 @@ const Contact = () => {
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
-                  <Label htmlFor="name">Name *</Label>
+                  <Label htmlFor="name">{t('contact.name')} *</Label>
                   <Input
                     id="name"
                     required
@@ -78,7 +80,7 @@ const Contact = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email *</Label>
+                  <Label htmlFor="email">{t('contact.email')} *</Label>
                   <Input
                     id="email"
                     type="email"
@@ -90,7 +92,7 @@ const Contact = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="message">Message *</Label>
+                  <Label htmlFor="message">{t('contact.message')} *</Label>
                   <Textarea
                     id="message"
                     required
@@ -102,7 +104,7 @@ const Contact = () => {
                 </div>
 
                 <Button type="submit" size="lg" className="w-full">
-                  Send Message
+                  {t('contact.send')}
                 </Button>
               </form>
             </CardContent>

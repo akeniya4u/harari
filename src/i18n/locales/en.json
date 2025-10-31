@@ -1,0 +1,101 @@
+{
+  "nav": {
+    "home": "Home",
+    "destinations": "Destinations",
+    "thingsToDo": "Things to Do",
+    "invest": "Invest in Harar",
+    "planTrip": "Plan Your Trip",
+    "contact": "Contact"
+  },
+  "home": {
+    "heroTitle": "Discover the Ancient Walled City of Harar",
+    "heroSubtitle": "A UNESCO World Heritage Site & Ethiopia's Fourth Holiest City",
+    "exploreCTA": "Explore Harar",
+    "planCTA": "Plan Your Trip"
+  },
+  "destinations": {
+    "title": "Explore Harar's Historic Destinations",
+    "subtitle": "Discover the ancient gates, museums, and cultural landmarks that make Harar unique"
+  },
+  "thingsToDo": {
+    "title": "Things to Do in Harar",
+    "subtitle": "Experience the rich culture, history, and adventure that awaits you",
+    "nature": "Nature Experience",
+    "natureDesc": "Explore the natural beauty and landscapes surrounding Harar",
+    "cultural": "Cultural Experience",
+    "culturalDesc": "Immerse yourself in Harar's rich traditions and heritage",
+    "outdoor": "Outdoor and Adventure",
+    "outdoorDesc": "Experience thrilling adventures and outdoor activities",
+    "educational": "Research and Educational Travel",
+    "educationalDesc": "Discover the academic and historical significance of Harar",
+    "findGuide": "Looking for a personalized tour?",
+    "findGuideDesc": "Find experienced tour guides to help you explore Harar",
+    "findGuideBtn": "Find a Tour Guide"
+  },
+  "invest": {
+    "title": "Invest in Harar",
+    "subtitle": "Discover investment opportunities in one of Africa's most historic and culturally rich cities",
+    "whyInvest": "Why Invest in Harar?",
+    "growingTourism": "Growing Tourism",
+    "growingTourismDesc": "UNESCO World Heritage Site attracting visitors worldwide",
+    "safeDest": "Safe Destination",
+    "safeDestDesc": "Peaceful community welcoming international investment",
+    "culturalRich": "Cultural Richness",
+    "culturalRichDesc": "Unique blend of Ethiopian and Islamic heritage",
+    "strategicLoc": "Strategic Location",
+    "strategicLocDesc": "Gateway to the Horn of Africa with growing connectivity",
+    "sectors": "Investment Sectors",
+    "hospitality": "Hospitality & Tourism",
+    "hospitalityDesc": "Hotels, guesthouses, and tourist facilities to accommodate growing visitor numbers",
+    "culturalTourism": "Cultural Tourism",
+    "culturalTourismDesc": "Tour operations, cultural centers, and heritage preservation projects",
+    "foodBev": "Food & Beverage",
+    "foodBevDesc": "Restaurants showcasing traditional Harari cuisine and coffee culture",
+    "artsCrafts": "Arts & Crafts",
+    "artsCraftsDesc": "Traditional basketry, weaving, and handcraft production and retail",
+    "expressInterest": "Express Your Interest",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone Number",
+    "investmentType": "Investment Type",
+    "selectType": "Select investment type",
+    "message": "Message",
+    "tellUs": "Tell us about your investment interests",
+    "submit": "Submit Interest",
+    "successMsg": "Thank you for your interest! We'll be in touch soon."
+  },
+  "planTrip": {
+    "title": "Plan Your Trip to Harar",
+    "subtitle": "Everything you need to make your visit to Harar unforgettable",
+    "all": "All",
+    "hotels": "Hotels",
+    "guestHouses": "Guest Houses",
+    "carRental": "Car Rental",
+    "tourGuides": "Tour Guides",
+    "needAssistance": "Need Personal Assistance?",
+    "assistanceDesc": "Our team is here to help you plan the perfect trip to Harar",
+    "contactUs": "Contact Us"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
+    "formTitle": "Send us a Message",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "info": "Contact Information",
+    "successMsg": "Message sent successfully! We'll get back to you soon."
+  },
+  "footer": {
+    "tagline": "Discover the ancient walled city of Harar",
+    "quickLinks": "Quick Links",
+    "followUs": "Follow Us",
+    "rights": "All rights reserved."
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "close": "Close",
+    "viewDetails": "View Details"
+  }
+}
