@@ -51,7 +51,7 @@ const Destinations = () => {
     category: "Museums",
     visitingHours: "9:00 AM - 5:00 PM",
     mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62780.95926477595!2d42.093548!3d9.313611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1631bba6b9cc75ad%3A0x3d5c6e51c7c9a6db!2sHarar%2C%20Ethiopia!5e0!3m2!1sen!2s!4v1234567890",
-    gallery: [museumSherifImage, geyGarImage, marketsImage]
+    gallery: [museumSherifImage]
   }, {
     name: "Ada Gar Museum",
     description: "Exhibition of Harari traditional household items and architecture.",
@@ -60,7 +60,7 @@ const Destinations = () => {
     location: "Inside Jugol Wall",
     category: "Museums",
     visitingHours: "8:30 AM - 6:00 PM",
-    gallery: [museumAdaGarImage, culturalImage]
+    gallery: [museumAdaGarImage]
   }, {
     name: "Harar National Museum",
     description: "Collection of Harari manuscripts, heritage items, and artifacts.",
@@ -69,7 +69,7 @@ const Destinations = () => {
     location: "Near Main Gate",
     category: "Museums",
     visitingHours: "9:00 AM - 5:30 PM",
-    gallery: [museumHararImage, geyGarImage, marketsImage]
+    gallery: [museumHararImage]
   }, {
     name: "Arthur Rimbaud Collection Center",
     description: "Historic home displaying collections related to the French poet Arthur Rimbaud.",
@@ -78,7 +78,7 @@ const Destinations = () => {
     location: "Central Harar",
     category: "Museums",
     visitingHours: "9:00 AM - 5:00 PM",
-    gallery: [museumArthurImage, rimbaudImage, culturalImage]
+    gallery: [museumArthurImage, rimbaudImage]
   },
   // Cultural & Artistic Centers
   {
@@ -89,7 +89,7 @@ const Destinations = () => {
     location: "Within Jugol",
     category: "Cultural Sites",
     visitingHours: "8:00 AM - 6:00 PM",
-    gallery: [ayeHajiyaCenterImage, geyGarImage, marketsImage]
+    gallery: [ayeHajiyaCenterImage]
   }, {
     name: "Basketry Museum and Abdimuhaymin Gallery",
     description: "Features Harari basket craftsmanship and traditional decorative art.",
@@ -98,7 +98,7 @@ const Destinations = () => {
     location: "Jugol District",
     category: "Cultural Sites",
     visitingHours: "9:00 AM - 5:00 PM",
-    gallery: [basketryMuseumImage, culturalImage, geyGarImage]
+    gallery: [basketryMuseumImage]
   },
   // Local Experiences
   {
@@ -109,7 +109,7 @@ const Destinations = () => {
     location: "Various Cultural Centers",
     category: "Local Experiences",
     visitingHours: "Evening performances - check schedule",
-    gallery: [culturalSongDanceImage, geyGarImage, marketsImage]
+    gallery: [culturalSongDanceImage]
   }, {
     name: "Hyena Feeding",
     description: "Witness Harar's world-famous nightly hyena feeding tradition.",
@@ -118,7 +118,7 @@ const Destinations = () => {
     location: "Outside City Walls",
     category: "Local Experiences",
     visitingHours: "7:00 PM - 9:00 PM (nightly)",
-    gallery: [hyenaFeedingImage, geyGarImage, culturalImage]
+    gallery: [hyenaFeedingImage]
   },
   // Gates
   {
@@ -129,7 +129,7 @@ const Destinations = () => {
     location: "Eastern Harar",
     category: "Gates",
     label: "Gate of Freedom",
-    gallery: [gateLibertyImage, heroImage, marketsImage]
+    gallery: [gateLibertyImage]
   }, {
     name: "Sugutat Beri (Peace Gate)",
     description: "A gate symbolizing harmony, once the meeting point of traders and hyenas, reflecting coexistence and peace.",
@@ -138,7 +138,7 @@ const Destinations = () => {
     location: "Near Market Area",
     category: "Gates",
     label: "Gate of Harmony",
-    gallery: [gatePeaceImage, marketsImage, natureImage]
+    gallery: [gatePeaceImage, marketsImage]
   }, {
     name: "Argoba Beri (Mercy Gate)",
     description: "Named after the Argoba people, representing compassion, kinship, and Harar's welcoming spirit.",
@@ -147,7 +147,7 @@ const Destinations = () => {
     location: "Northern Entrance",
     category: "Gates",
     label: "Gate of Compassion",
-    gallery: [gateMercyImage, culturalImage, geyGarImage]
+    gallery: [gateMercyImage]
   }, {
     name: "Bedri Beri (Hakim Gate)",
     description: "Honors artisans and scholars, symbolizing wisdom, skill, and resilience.",
@@ -156,7 +156,7 @@ const Destinations = () => {
     location: "Western Harar",
     category: "Gates",
     label: "Gate of Wisdom",
-    gallery: [gateWisdomImage, rimbaudImage, marketsImage]
+    gallery: [gateWisdomImage]
   }, {
     name: "Asmaadin Beri (Victory Gate)",
     description: "Named after a saint, symbolizing victory through faith and unity.",
@@ -165,7 +165,7 @@ const Destinations = () => {
     location: "Southern Harar",
     category: "Gates",
     label: "Gate of Triumph",
-    gallery: [gateVictoryImage, heroImage, culturalImage]
+    gallery: [gateVictoryImage]
   }];
   const categories = ["All", "Museums", "Cultural Sites", "Local Experiences", "Gates"];
   const filteredDestinations = selectedCategory === "All" ? destinations : destinations.filter(dest => dest.category === selectedCategory);
