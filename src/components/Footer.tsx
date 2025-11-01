@@ -1,17 +1,14 @@
 import { Link } from "react-router-dom";
 import { Facebook, Mail, Phone, MapPin, Instagram } from "lucide-react";
-import { useTranslation } from "react-i18next";
 
 const Footer = () => {
-  const { t } = useTranslation();
-  
   const quickLinks = [
-    { name: t('nav.home'), path: "/" },
-    { name: t('nav.destinations'), path: "/destinations" },
-    { name: t('nav.thingsToDo'), path: "/things-to-do" },
-    { name: t('nav.invest'), path: "/invest" },
-    { name: t('nav.planTrip'), path: "/plan-your-trip" },
-    { name: t('nav.contact'), path: "/contact" },
+    { name: "Home", path: "/" },
+    { name: "Destinations", path: "/destinations" },
+    { name: "Things To Do", path: "/things-to-do" },
+    { name: "Invest in Harar", path: "/invest" },
+    { name: "Plan Your Trip", path: "/plan-your-trip" },
+    { name: "Contact Us", path: "/contact" },
   ];
 
   return (
@@ -22,7 +19,7 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold text-primary mb-4">Visit Harar</h3>
             <p className="text-muted-foreground mb-4">
-              {t('footer.tagline')}
+              Discover the ancient walled city of Harar, a UNESCO World Heritage site rich in culture, history, and tradition.
             </p>
             <div className="flex items-center space-x-4">
               <a
@@ -48,7 +45,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">{t('footer.quickLinks')}</h3>
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.path}>
@@ -65,7 +62,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">{t('contact.info')}</h3>
+            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-center space-x-2 text-muted-foreground">
                 <Mail size={18} />
@@ -84,7 +81,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Visit Harar. {t('footer.rights')}</p>
+          <p>&copy; {new Date().getFullYear()} Visit Harar. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -1,16 +1,13 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { useTranslation } from "react-i18next";
 import HeroSection from "@/components/HeroSection";
 import heroImage from "@/assets/hero-building.jpg";
 import traditionalCraftsImage from "@/assets/traditional-crafts.jpg";
 import culturalGatheringImage from "@/assets/cultural-gathering.jpg";
 import gateWisdomImage from "@/assets/gate-wisdom.jpg";
 import { MapPin, Users, Building2, ArrowRight, Landmark, Coins, Shield, Globe } from "lucide-react";
-
 const Home = () => {
-  const { t } = useTranslation();
   const features = [{
     icon: MapPin,
     title: "UNESCO World Heritage",
@@ -25,7 +22,7 @@ const Home = () => {
     description: "Discover traditional Harari houses and the iconic Jegol Wall."
   }];
   return <div className="min-h-screen">
-      <HeroSection title={t('home.heroTitle')} subtitle={t('home.heroSubtitle')} image={heroImage} ctaText={t('home.exploreCTA')} ctaLink="#explore" />
+      <HeroSection title="Welcome to Harar" subtitle="The City of Peace and Heritage" image={heroImage} ctaText="Explore Harar" ctaLink="#explore" />
 
       {/* UNESCO City of Peace Section */}
       <section id="explore" className="py-20 bg-gradient-to-b from-background via-muted/30 to-background">

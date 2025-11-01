@@ -6,11 +6,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
-import { useTranslation } from "react-i18next";
 import { TrendingUp, Shield, Globe, Users } from "lucide-react";
 
 const InvestInHarar = () => {
-  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -21,7 +19,7 @@ const InvestInHarar = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success(t('invest.successMsg'));
+    toast.success("Thank you for your interest! We'll contact you soon.");
     setFormData({ name: "", email: "", phone: "", investmentType: "", message: "" });
   };
 
@@ -53,9 +51,9 @@ const InvestInHarar = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-4">{t('invest.title')}</h1>
+          <h1 className="text-5xl font-bold mb-4">Invest in Harar</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {t('invest.subtitle')}
+            Discover promising investment opportunities in one of Ethiopia's most culturally rich and historically significant cities. Join us in preserving heritage while building sustainable tourism.
           </p>
         </div>
 
@@ -76,7 +74,7 @@ const InvestInHarar = () => {
 
         {/* Investment Areas */}
         <div className="bg-card rounded-lg p-8 mb-12 shadow-lg">
-          <h2 className="text-3xl font-bold mb-6 text-center">{t('invest.sectors')}</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center">Investment Sectors</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="p-6 border border-border rounded-lg">
               <h3 className="text-xl font-semibold mb-3 text-primary">Hospitality & Accommodation</h3>

@@ -1,5 +1,4 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { useTranslation } from "react-i18next";
 import natureImage from "@/assets/harar-alleyway-night.jpg";
 import culturalImage from "@/assets/harari-women-ceremony.jpg";
 import marketsImage from "@/assets/hyena-feeding-night.jpg";
@@ -7,31 +6,29 @@ import museumImage from "@/assets/city-peace-alleyway.jpg";
 import { Compass, Users, Mountain, BookOpen } from "lucide-react";
 
 const ThingsToDo = () => {
-  const { t } = useTranslation();
-  
   const experiences = [
     {
       icon: Mountain,
-      title: t('thingsToDo.nature'),
-      description: t('thingsToDo.natureDesc'),
+      title: "Nature Experience",
+      description: "Explore Harar's surrounding landscapes and green valleys. Discover the natural beauty of the Ethiopian highlands with guided nature walks and scenic viewpoints.",
       image: natureImage,
     },
     {
       icon: Users,
-      title: t('thingsToDo.cultural'),
-      description: t('thingsToDo.culturalDesc'),
+      title: "Cultural Experience",
+      description: "Learn Harari traditions, festivals, and daily lifestyle. Participate in traditional coffee ceremonies, witness colorful festivals, and engage with local communities.",
       image: culturalImage,
     },
     {
       icon: Compass,
-      title: t('thingsToDo.outdoor'),
-      description: t('thingsToDo.outdoorDesc'),
+      title: "Outdoor and Adventure",
+      description: "Experience hiking, local markets, and the famous hyena feeding. Join evening hyena feeding sessions and explore bustling traditional markets filled with spices and crafts.",
       image: marketsImage,
     },
     {
       icon: BookOpen,
-      title: t('thingsToDo.educational'),
-      description: t('thingsToDo.educationalDesc'),
+      title: "Research and Educational Travel",
+      description: "Visit museums and historical archives for cultural studies. Access rare manuscripts, historical documents, and learn about Islamic heritage and Harari history.",
       image: museumImage,
     },
   ];
@@ -41,9 +38,9 @@ const ThingsToDo = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-4">{t('thingsToDo.title')}</h1>
+          <h1 className="text-5xl font-bold mb-4">Things To Do in Harar</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {t('thingsToDo.subtitle')}
+            From cultural immersion to outdoor adventures, Harar offers diverse experiences for every traveler. Discover what makes this ancient city truly unforgettable.
           </p>
         </div>
 
@@ -84,13 +81,13 @@ const ThingsToDo = () => {
 
         {/* Additional Info */}
         <div className="mt-16 bg-primary text-primary-foreground rounded-lg p-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">{t('thingsToDo.findGuide')}</h2>
+          <h2 className="text-3xl font-bold mb-4">Need a Guide?</h2>
           <p className="text-lg mb-6 opacity-90 max-w-2xl mx-auto">
-            {t('thingsToDo.findGuideDesc')}
+            Enhance your experience with a knowledgeable local guide who can show you hidden gems and share fascinating stories about Harar's heritage.
           </p>
           <a href="/plan-your-trip#guides">
             <button className="bg-primary-foreground text-primary px-8 py-3 rounded-md font-semibold hover:opacity-90 transition-opacity">
-              {t('thingsToDo.findGuideBtn')}
+              Find a Tour Guide
             </button>
           </a>
         </div>
