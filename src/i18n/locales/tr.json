@@ -1,0 +1,220 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "destinations": "Destinasyonlar",
+    "thingsToDo": "Yapılacak Şeyler",
+    "invest": "Harar'a Yatırım Yapın",
+    "planTrip": "Seyahatinizi Planlayın",
+    "contact": "İletişim"
+  },
+  "home": {
+    "hero": {
+      "title": "Harar'a Hoş Geldiniz",
+      "subtitle": "Barış ve Miras Şehri"
+    },
+    "unesco": {
+      "badge": "UNESCO Dünya Mirası",
+      "title": "Harar: Barış Şehri",
+      "description": "Bir zamanlar Harla olarak bilinen Harar, yüzyıllarca inanç, kültür ve mirasın efsanevi Jegol Duvarı içinde birleştiği dünyanın en eski İslam şehirlerinden biri olarak duruyor.",
+      "mosques": "Sadece 48 hektarlık alanda 800 yıllık El-Cami Camii dahil 82+ cami",
+      "wall": "Yılın her günü için bir sokak olmak üzere 365 dar sokağa sahip 3,3 km'lik Jegol Duvarı",
+      "gates": "İslam'ın Beş Şartını simgeleyen, kutsal mahalleleri birbirine bağlayan 5 kapı",
+      "recognition": "2016'da UNESCO tarafından \"Barış Şehri\" olarak tanınma"
+    },
+    "gates": {
+      "title": "Kutsal Kapılar",
+      "description": "Manevi mirasa dalmış bir şehre açılan beş giriş"
+    },
+    "architecture": {
+      "title": "Mimari Adanmışlık",
+      "description": "Harar'ın mimarisi inanca derin saygıyı yansıtır. Cami girişleri kasıtlı olarak alçak yapılmıştır, ibadet edenleri içeri girerken sembolik olarak eğilmeye teşvik eder – manevi alçakgönüllülüğün fiziksel bir tezahürü."
+    },
+    "independence": {
+      "title": "Bağımsız İslam Devleti",
+      "description": "1887'ye kadar Harar, kendi tarihi paralarını basarak ve diplomatik ilişkiler sürdürerek bağımsız bir İslam devleti olarak gelişti. Türkiye, Harar'ın dünya sahnesindeki önemini tanıyarak burada ilk yabancı büyükelçiliğini kurdu."
+    },
+    "battle": {
+      "title": "Chelenko Savaşı",
+      "description": "1887'de Chelenko Savaşı'nın ardından Harar, Etiyopya'ya katıldı ve günümüz ziyaretçilerini büyülemeye devam eden benzersiz kültürel ve manevi kimliğini koruyarak yeni bir bölüm başlattı."
+    },
+    "heritage": {
+      "living": "Yaşayan Miras",
+      "livingDesc": "Kadim geleneklerin günlük yaşamla buluştuğu yer",
+      "treasures": "Kültürel Hazineler",
+      "treasuresDesc": "İnanç, sanat ve toplumun bir dokusu"
+    },
+    "cta": {
+      "title": "Harar'ı Deneyimlemeye Hazır mısınız?",
+      "description": "Bu olağanüstü şehre yolculuğunuzu planlayın ve Harar'ın yüzyıllardır gezginleri neden büyülediğini keşfedin.",
+      "explore": "Cazibe Merkezlerini Keşfedin"
+    },
+    "features": {
+      "unesco": {
+        "title": "UNESCO Dünya Mirası",
+        "description": "Kültürel önemi nedeniyle UNESCO tarafından tanınan antik surlu şehri keşfedin."
+      },
+      "culture": {
+        "title": "Zengin Kültür",
+        "description": "Benzersiz Harari geleneklerini, festivallerini ve sıcak misafirperverliğini deneyimleyin."
+      },
+      "architecture": {
+        "title": "Tarihi Mimari",
+        "description": "Geleneksel Harari evlerini ve ikonik Jegol Duvarı'nı keşfedin."
+      }
+    }
+  },
+  "destinations": {
+    "hero": {
+      "title": "Harar'ın Destinasyonlarını Keşfedin",
+      "subtitle": "Yüzyıllık kültür, tarih ve yaşayan geleneğe adım atın.",
+      "cta": "Seyahatinizi Planlayın"
+    },
+    "gatesIntro": "Harar Jugol'un yaşayan duvarlarından geçin ve her biri cesaret, inanç ve birlik hikayesi anlatan Beş Kapıyı keşfedin.",
+    "categories": {
+      "all": "Tümü",
+      "museums": "Müzeler",
+      "cultural": "Kültürel Alanlar",
+      "experiences": "Yerel Deneyimler",
+      "gates": "Kapılar"
+    },
+    "cta": {
+      "title": "Harar Ziyaretinizi Planlayın",
+      "description": "Her destinasyon, Harar'ın zengin kültürel dokusuna benzersiz bir pencere sunar. Tüm bu yerleri tam olarak deneyimlemek için en az 2-3 gün geçirmenizi öneriyoruz.",
+      "plan": "Seyahatinizi Planlayın",
+      "contact": "Bize Ulaşın"
+    }
+  },
+  "thingsToDo": {
+    "title": "Harar'da Yapılacak Şeyler",
+    "subtitle": "Kültürel daldırmadan açık hava maceralarına kadar Harar, her gezgin için çeşitli deneyimler sunar. Bu antik şehri gerçekten unutulmaz kılan şeyi keşfedin.",
+    "nature": {
+      "title": "Doğa Deneyimi",
+      "description": "Harar'ın çevresindeki manzaraları ve yeşil vadileri keşfedin. Rehberli doğa yürüyüşleri ve manzaralı bakış noktalarıyla Etiyopya yaylalarının doğal güzelliğini keşfedin."
+    },
+    "cultural": {
+      "title": "Kültürel Deneyim",
+      "description": "Harari geleneklerini, festivallerini ve günlük yaşam tarzını öğrenin. Geleneksel kahve törenlerine katılın, renkli festivallere tanık olun ve yerel topluluklarla etkileşime geçin."
+    },
+    "adventure": {
+      "title": "Açık Hava ve Macera",
+      "description": "Yürüyüş, yerel pazarlar ve ünlü sırtlan beslemeyi deneyimleyin. Akşam sırtlan besleme oturumlarına katılın ve baharatlar ve el sanatlarıyla dolu hareketli geleneksel pazarları keşfedin."
+    },
+    "education": {
+      "title": "Araştırma ve Eğitim Seyahati",
+      "description": "Kültürel çalışmalar için müzeleri ve tarihi arşivleri ziyaret edin. Nadir el yazmalarına, tarihi belgelere erişin ve İslam mirası ile Harari tarihi hakkında bilgi edinin."
+    },
+    "guide": {
+      "title": "Rehbere İhtiyacınız Var mı?",
+      "description": "Deneyiminizi, size gizli kalmış mücevherleri gösterebilecek ve Harar'ın mirası hakkında büyüleyici hikayeler paylaşabilecek bilgili bir yerel rehberle geliştirin.",
+      "cta": "Bir Tur Rehberi Bulun"
+    }
+  },
+  "invest": {
+    "title": "Harar'a Yatırım Yapın",
+    "subtitle": "Etiyopya'nın kültürel olarak en zengin ve tarihsel olarak en önemli şehirlerinden birinde gelecek vaat eden yatırım fırsatlarını keşfedin. Sürdürülebilir turizm inşa ederken mirası korumada bize katılın.",
+    "opportunities": {
+      "tourism": {
+        "title": "Büyüyen Turizm",
+        "description": "Harar, turist gelişlerinde istikrarlı bir büyüme yaşıyor ve bu da konaklama ve turizm hizmetleri için fırsatlar yaratıyor."
+      },
+      "safe": {
+        "title": "Güvenli ve Emniyetli",
+        "description": "'Barış Şehri' olarak bilinen Harar, yatırımcılar ve ziyaretçiler için istikrarlı ve misafirperver bir ortam sunuyor."
+      },
+      "unesco": {
+        "title": "UNESCO Tanınması",
+        "description": "Dünya Mirası statüsü uluslararası ilgiyi artırıyor ve hükümet desteğiyle kültürel korumayı garanti ediyor."
+      },
+      "culture": {
+        "title": "Kültürel Çekicilik",
+        "description": "Benzersiz Harari kültürü, geleneksel mimari ve otantik deneyimler, dünya çapında seçici gezginleri çekiyor."
+      }
+    },
+    "sectors": {
+      "title": "Yatırım Sektörleri",
+      "hospitality": {
+        "title": "Konaklama ve Misafirperverlik",
+        "description": "Ziyaretçilere otantik Harari deneyimleri sunan butik oteller, pansiyonlar ve benzersiz kültürel konaklamalar."
+      },
+      "tourism": {
+        "title": "Kültürel Turizm Hizmetleri",
+        "description": "Tur operasyonları, kültür merkezleri, geleneksel zanaat atölyeleri ve miras koruma girişimleri."
+      },
+      "food": {
+        "title": "Yiyecek ve İçecek",
+        "description": "Harari mutfağını sergileyen restoranlar, kahvehaneler ve geleneksel kahve törenleri için mekanlar."
+      },
+      "arts": {
+        "title": "Sanat ve El Sanatları",
+        "description": "Yerel zanaatkarlar için destek, geleneksel sepet örme, tekstil üretimi ve el sanatları pazarları."
+      }
+    },
+    "form": {
+      "title": "İlginizi Belirtin",
+      "subtitle": "Aşağıdaki formu doldurun ve yatırım ekibimiz Harar'daki fırsatları tartışmak için sizinle iletişime geçecektir.",
+      "name": "Ad Soyad",
+      "email": "E-posta Adresi",
+      "phone": "Telefon Numarası",
+      "investmentType": "Yatırım Türü",
+      "selectType": "Yatırım türünü seçin",
+      "hospitalityOption": "Konaklama ve Misafirperverlik",
+      "tourismOption": "Kültürel Turizm Hizmetleri",
+      "foodOption": "Yiyecek ve İçecek",
+      "artsOption": "Sanat ve El Sanatları",
+      "otherOption": "Diğer",
+      "message": "Mesaj",
+      "messagePlaceholder": "Yatırım ilgi alanlarınız ve sorularınız hakkında bize bilgi verin...",
+      "submit": "Talep Gönder",
+      "success": "İlginiz için teşekkür ederiz! Yakında sizinle iletişime geçeceğiz."
+    }
+  },
+  "planTrip": {
+    "title": "Harar Seyahatinizi Planlayın",
+    "subtitle": "Harar'da rahat ve unutulmaz bir konaklama için ihtiyacınız olan her şey. Konaklama yerlerinden ulaşıma ve uzman rehberlere kadar.",
+    "tabs": {
+      "all": "Tümü",
+      "hotels": "Oteller",
+      "guestHouses": "Pansiyonlar",
+      "carRental": "Araç Kiralama",
+      "guides": "Tur Rehberleri"
+    },
+    "sections": {
+      "hotels": "Oteller",
+      "guestHouses": "Pansiyonlar",
+      "carRental": "Araç Kiralama",
+      "carRentalInfo": "Araç kiralama bilgileri yakında gelecek. Ulaşım ayarlamaları için lütfen tur rehberlerimizle iletişime geçin.",
+      "guides": "Profesyonel Tur Rehberleri",
+      "personalAssistance": "Kişisel Yardım",
+      "personalAssistanceDesc": "Kişisel seyahat yardımı ve danışmanlık"
+    }
+  },
+  "contact": {
+    "title": "İletişim",
+    "subtitle": "Harar'ı ziyaret etme hakkında sorularınız mı var? Mükemmel yolculuğunuzu planlamanıza yardımcı olmak için buradayız.",
+    "form": {
+      "title": "Bize Mesaj Gönderin",
+      "subtitle": "Aşağıdaki formu doldurun, en kısa sürede yanıt vereceğiz.",
+      "name": "Ad",
+      "email": "E-posta",
+      "message": "Mesaj",
+      "namePlaceholder": "Adınız",
+      "emailPlaceholder": "email@ornek.com",
+      "messagePlaceholder": "Size nasıl yardımcı olabileceğimizi bize bildirin...",
+      "submit": "Mesaj Gönder",
+      "success": "Mesaj gönderildi! Yakında size geri döneceğiz."
+    },
+    "info": {
+      "email": "E-posta",
+      "phone": "Telefon / WhatsApp",
+      "location": "Konum",
+      "locationValue": "Jugol ana kapısının yakınında, Harar, Etiyopya",
+      "findUs": "Bizi Bulun"
+    }
+  },
+  "footer": {
+    "tagline": "UNESCO Dünya Mirası olan Harar'ın antik mirası ve canlı kültürünü keşfedin.",
+    "quickLinks": "Hızlı Bağlantılar",
+    "followUs": "Bizi Takip Edin",
+    "copyright": "© 2024 Visit Harar. Tüm hakları saklıdır."
+  }
+}

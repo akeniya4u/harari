@@ -1,28 +1,39 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { useTranslation } from "react-i18next";
 import HeroSection from "@/components/HeroSection";
 import heroImage from "@/assets/hero-building.jpg";
 import traditionalCraftsImage from "@/assets/traditional-crafts.jpg";
 import culturalGatheringImage from "@/assets/cultural-gathering.jpg";
 import gateWisdomImage from "@/assets/gate-wisdom.jpg";
 import { MapPin, Users, Building2, ArrowRight, Landmark, Coins, Shield, Globe } from "lucide-react";
+
 const Home = () => {
+  const { t } = useTranslation();
+
   const features = [{
     icon: MapPin,
-    title: "UNESCO World Heritage",
-    description: "Explore the ancient walled city recognized by UNESCO for its cultural significance."
+    title: t('home.features.unesco.title'),
+    description: t('home.features.unesco.description')
   }, {
     icon: Users,
-    title: "Rich Culture",
-    description: "Experience unique Harari traditions, festivals, and warm hospitality."
+    title: t('home.features.culture.title'),
+    description: t('home.features.culture.description')
   }, {
     icon: Building2,
-    title: "Historic Architecture",
-    description: "Discover traditional Harari houses and the iconic Jegol Wall."
+    title: t('home.features.architecture.title'),
+    description: t('home.features.architecture.description')
   }];
+
   return <div className="min-h-screen">
-      <HeroSection title="Welcome to Harar" subtitle="The City of Peace and Heritage" image={heroImage} ctaText="Explore Harar" ctaLink="#explore" />
+      <HeroSection 
+        title={t('home.hero.title')} 
+        subtitle={t('home.hero.subtitle')} 
+        image={heroImage} 
+        ctaText={t('home.cta.explore')} 
+        ctaLink="#explore" 
+      />
 
       {/* UNESCO City of Peace Section */}
       <section id="explore" className="py-20 bg-gradient-to-b from-background via-muted/30 to-background">
@@ -30,14 +41,13 @@ const Home = () => {
           {/* Main Title */}
           <div className="max-w-5xl mx-auto text-center mb-16">
             <div className="inline-block px-6 py-2 mb-6 rounded-full bg-primary/10 border border-primary/20">
-              <span className="text-primary font-semibold text-sm tracking-wide uppercase">UNESCO World Heritage</span>
+              <span className="text-primary font-semibold text-sm tracking-wide uppercase">{t('home.unesco.badge')}</span>
             </div>
             <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-              Harar: The City of Peace
+              {t('home.unesco.title')}
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Once known as <span className="font-semibold text-foreground">Harla</span>, Harar stands as one of the world's oldest Islamic cities, 
-              where centuries of faith, culture, and heritage converge within the legendary Jegol Wall.
+              {t('home.unesco.description')}
             </p>
           </div>
 
@@ -49,7 +59,7 @@ const Home = () => {
                   <Landmark className="w-8 h-8 text-primary-foreground" />
                 </div>
                 <h3 className="text-3xl font-bold text-primary mb-2">82+</h3>
-                <p className="text-sm text-muted-foreground">Mosques in just 48 hectares, including the 800-year-old Al-Jami Mosque</p>
+                <p className="text-sm text-muted-foreground">{t('home.unesco.mosques')}</p>
               </CardContent>
             </Card>
 
@@ -59,7 +69,7 @@ const Home = () => {
                   <MapPin className="w-8 h-8 text-primary-foreground" />
                 </div>
                 <h3 className="text-3xl font-bold text-primary mb-2">3.3km</h3>
-                <p className="text-sm text-muted-foreground">Jegol Wall with 365 alleyways – one for each day of the year</p>
+                <p className="text-sm text-muted-foreground">{t('home.unesco.wall')}</p>
               </CardContent>
             </Card>
 
@@ -68,8 +78,8 @@ const Home = () => {
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-primary to-secondary mb-4 group-hover:scale-110 transition-transform">
                   <Shield className="w-8 h-8 text-primary-foreground" />
                 </div>
-                <h3 className="text-3xl font-bold text-primary mb-2">5 Gates</h3>
-                <p className="text-sm text-muted-foreground">Symbolizing the Five Pillars of Islam, connecting sacred neighborhoods</p>
+                <h3 className="text-3xl font-bold text-primary mb-2">5</h3>
+                <p className="text-sm text-muted-foreground">{t('home.unesco.gates')}</p>
               </CardContent>
             </Card>
 
@@ -79,7 +89,7 @@ const Home = () => {
                   <Coins className="w-8 h-8 text-primary-foreground" />
                 </div>
                 <h3 className="text-3xl font-bold text-primary mb-2">2016</h3>
-                <p className="text-sm text-muted-foreground">UNESCO recognition as the "City of Peace"</p>
+                <p className="text-sm text-muted-foreground">{t('home.unesco.recognition')}</p>
               </CardContent>
             </Card>
           </div>
@@ -95,8 +105,8 @@ const Home = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent" />
                 <div className="absolute bottom-8 left-8 right-8">
-                  <h3 className="text-3xl font-bold text-primary-foreground mb-2">The Sacred Gates</h3>
-                  <p className="text-primary-foreground/90">Five entrances to a city steeped in spiritual heritage</p>
+                  <h3 className="text-3xl font-bold text-primary-foreground mb-2">{t('home.gates.title')}</h3>
+                  <p className="text-primary-foreground/90">{t('home.gates.description')}</p>
                 </div>
               </div>
 
@@ -107,10 +117,9 @@ const Home = () => {
                       <Building2 className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-lg mb-2">Architectural Devotion</h4>
+                      <h4 className="font-semibold text-lg mb-2">{t('home.architecture.title')}</h4>
                       <p className="text-muted-foreground text-sm leading-relaxed">
-                        Harar's architecture reflects deep respect for faith. Mosque entrances are intentionally low, 
-                        encouraging worshippers to bow symbolically as they enter – a physical manifestation of spiritual humility.
+                        {t('home.architecture.description')}
                       </p>
                     </div>
                   </div>
@@ -122,11 +131,9 @@ const Home = () => {
                       <Globe className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-lg mb-2">Independent Islamic State</h4>
+                      <h4 className="font-semibold text-lg mb-2">{t('home.independence.title')}</h4>
                       <p className="text-muted-foreground text-sm leading-relaxed">
-                        Until 1887, Harar flourished as an independent Islamic state, minting its own historic coins and 
-                        maintaining diplomatic relations. Turkey established the first foreign embassy here, recognizing Harar's 
-                        significance on the world stage.
+                        {t('home.independence.description')}
                       </p>
                     </div>
                   </div>
@@ -138,10 +145,9 @@ const Home = () => {
                       <Users className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-lg mb-2">Battle of Chelenko</h4>
+                      <h4 className="font-semibold text-lg mb-2">{t('home.battle.title')}</h4>
                       <p className="text-muted-foreground text-sm leading-relaxed">
-                        In 1887, following the Battle of Chelenko, Harar joined Ethiopia, beginning a new chapter 
-                        while preserving its unique cultural and spiritual identity that continues to captivate visitors today.
+                        {t('home.battle.description')}
                       </p>
                     </div>
                   </div>
@@ -160,8 +166,8 @@ const Home = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/85 to-transparent flex items-end p-8">
                 <div>
-                  <h3 className="text-3xl font-bold text-primary-foreground mb-2">Living Heritage</h3>
-                  <p className="text-primary-foreground/90">Where ancient traditions meet daily life</p>
+                  <h3 className="text-3xl font-bold text-primary-foreground mb-2">{t('home.heritage.living')}</h3>
+                  <p className="text-primary-foreground/90">{t('home.heritage.livingDesc')}</p>
                 </div>
               </div>
             </div>
@@ -174,8 +180,8 @@ const Home = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/85 to-transparent flex items-end p-8">
                 <div>
-                  <h3 className="text-3xl font-bold text-primary-foreground mb-2">Cultural Treasures</h3>
-                  <p className="text-primary-foreground/90">A tapestry of faith, art, and community</p>
+                  <h3 className="text-3xl font-bold text-primary-foreground mb-2">{t('home.heritage.treasures')}</h3>
+                  <p className="text-primary-foreground/90">{t('home.heritage.treasuresDesc')}</p>
                 </div>
               </div>
             </div>
@@ -186,23 +192,26 @@ const Home = () => {
       {/* CTA Section */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Experience Harar?</h2>
+          <h2 className="text-4xl font-bold mb-6">{t('home.cta.title')}</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Plan your journey to this remarkable city and discover why Harar has enchanted travelers for centuries.
+            {t('home.cta.description')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/destinations">
               <Button size="lg" variant="secondary">
-                Explore Attractions
+                {t('home.cta.explore')}
                 <ArrowRight className="ml-2" />
               </Button>
             </Link>
             <Link to="/plan-your-trip">
-              
+              <Button size="lg" variant="secondary">
+                {t('nav.planTrip')}
+              </Button>
             </Link>
           </div>
         </div>
       </section>
     </div>;
 };
+
 export default Home;

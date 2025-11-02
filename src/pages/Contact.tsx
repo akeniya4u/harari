@@ -5,9 +5,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
+import { useTranslation } from "react-i18next";
 import { Mail, Phone, MapPin, MessageSquare } from "lucide-react";
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -16,27 +18,27 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Message sent! We'll get back to you soon.");
+    toast.success(t('contact.form.success'));
     setFormData({ name: "", email: "", message: "" });
   };
 
   const contactInfo = [
     {
       icon: Mail,
-      title: "Email",
+      title: t('contact.info.email'),
       value: "info@visitharar.com",
       link: "mailto:info@visitharar.com",
     },
     {
       icon: Phone,
-      title: "Phone / WhatsApp",
+      title: t('contact.info.phone'),
       value: "+251925037003",
       link: "tel:+251925037003",
     },
     {
       icon: MapPin,
-      title: "Location",
-      value: "Near the main gate of Jugol, Harar, Ethiopia",
+      title: t('contact.info.location'),
+      value: t('contact.info.locationValue'),
       link: null,
     },
   ];
@@ -44,73 +46,69 @@ const Contact = () => {
   return (
     <div className="min-h-screen py-12">
       <div className="container mx-auto px-4">
-        {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-4">Contact Us</h1>
+          <h1 className="text-5xl font-bold mb-4">{t('contact.title')}</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Have questions about visiting Harar? We're here to help plan your perfect journey to this historic city.
+            {t('contact.subtitle')}
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Form */}
           <Card className="shadow-xl">
             <CardHeader>
               <CardTitle className="text-3xl flex items-center">
                 <MessageSquare className="mr-3 text-primary" />
-                Send Us a Message
+                {t('contact.form.title')}
               </CardTitle>
               <CardDescription>
-                Fill out the form below and we'll respond as soon as possible.
+                {t('contact.form.subtitle')}
               </CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
-                  <Label htmlFor="name">Name *</Label>
+                  <Label htmlFor="name">{t('contact.form.name')} *</Label>
                   <Input
                     id="name"
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="Your name"
+                    placeholder={t('contact.form.namePlaceholder')}
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email *</Label>
+                  <Label htmlFor="email">{t('contact.form.email')} *</Label>
                   <Input
                     id="email"
                     type="email"
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="your.email@example.com"
+                    placeholder={t('contact.form.emailPlaceholder')}
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="message">Message *</Label>
+                  <Label htmlFor="message">{t('contact.form.message')} *</Label>
                   <Textarea
                     id="message"
                     required
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Tell us how we can help you..."
+                    placeholder={t('contact.form.messagePlaceholder')}
                     rows={6}
                   />
                 </div>
 
                 <Button type="submit" size="lg" className="w-full">
-                  Send Message
+                  {t('contact.form.submit')}
                 </Button>
               </form>
             </CardContent>
           </Card>
 
-          {/* Contact Info & Map */}
           <div className="space-y-6">
-            {/* Contact Info Cards */}
             <div className="space-y-4">
               {contactInfo.map((info, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow">
@@ -136,10 +134,9 @@ const Contact = () => {
               ))}
             </div>
 
-            {/* Map */}
             <Card className="overflow-hidden shadow-lg">
               <CardHeader>
-                <CardTitle>Find Us</CardTitle>
+                <CardTitle>{t('contact.info.findUs')}</CardTitle>
               </CardHeader>
               <CardContent className="p-0">
                 <div className="w-full h-80">
