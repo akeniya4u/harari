@@ -28,13 +28,13 @@ const Navigation = () => {
             <span className="text-xl font-bold text-[#2B8B8C]">Visit Harar</span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center justify-center gap-8">
+          {/* Desktop & Tablet Navigation */}
+          <div className="hidden md:flex items-center justify-center gap-4 lg:gap-8">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`font-opensans text-[16px] font-semibold tracking-wide transition-colors duration-200 ${
+                className={`font-opensans text-[14px] lg:text-[16px] font-semibold tracking-wide transition-colors duration-200 whitespace-nowrap ${
                   isActive(item.path)
                     ? "text-[#2B8B8C]"
                     : "text-[#2B8B8C] hover:text-[#1E6F70]"

@@ -203,15 +203,15 @@ const Destinations = () => {
           </div>}
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map(category => <button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-full font-semibold uppercase tracking-wider transition-all duration-300 ${selectedCategory === category ? "bg-[#2B9A94] text-white shadow-lg" : "border-2 border-[#2B9A94] text-[#2B9A94] hover:bg-[#56B3AE] hover:text-white hover:border-[#56B3AE]"}`}>
+        <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-12 px-4">
+          {categories.map(category => <button key={category} onClick={() => setSelectedCategory(category)} className={`px-5 md:px-6 py-2.5 md:py-3 rounded-full font-semibold text-sm md:text-base uppercase tracking-wider transition-all duration-300 touch-manipulation ${selectedCategory === category ? "bg-[#2B9A94] text-white shadow-lg" : "border-2 border-[#2B9A94] text-[#2B9A94] hover:bg-[#56B3AE] hover:text-white hover:border-[#56B3AE]"}`}>
               {category}
             </button>)}
         </div>
 
         {/* Destinations Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {filteredDestinations.map((destination, index) => <div key={index} className="group relative h-[400px] rounded-xl overflow-hidden cursor-pointer transition-all duration-500 hover:shadow-[0_6px_20px_rgba(0,0,0,0.15)] hover:scale-[1.03]" onClick={() => handleViewDetails(destination)}>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-16 px-4 md:px-0">
+          {filteredDestinations.map((destination, index) => <div key={index} className="group relative h-[380px] md:h-[400px] rounded-[12px] md:rounded-[16px] overflow-hidden cursor-pointer transition-all duration-500 hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:scale-[1.02] shadow-[0_4px_12px_rgba(0,0,0,0.08)]" onClick={() => handleViewDetails(destination)}>
               {/* Background Image */}
               <img src={destination.image} alt={destination.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
               
@@ -221,22 +221,22 @@ const Destinations = () => {
           }} />
 
               {/* Category Badge */}
-              <div className="absolute top-4 left-4 z-10">
-                <span className={`px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide text-white shadow-md ${destination.category === "Gates" ? "bg-[#2B9A94]" : "bg-[#2B9A94]"}`}>
+              <div className="absolute top-3 md:top-4 left-3 md:left-4 z-10">
+                <span className={`px-3 md:px-4 py-1.5 md:py-2 rounded-full text-[10px] md:text-xs font-semibold uppercase tracking-wide text-white shadow-md ${destination.category === "Gates" ? "bg-[#2B9A94]" : "bg-[#2B9A94]"}`}>
                   {destination.label || destination.category}
                 </span>
               </div>
 
               {/* Content */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white z-10">
-                <h3 className="font-poppins text-2xl font-bold mb-2 leading-tight drop-shadow-lg">
+              <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6 text-white z-10">
+                <h3 className="font-poppins text-[18px] md:text-[20px] font-bold mb-2 leading-tight drop-shadow-lg">
                   {destination.name}
                 </h3>
-                <div className="flex items-start gap-2 mb-3 text-white">
-                  <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5 drop-shadow-md" />
-                  <span className="font-lato text-sm drop-shadow-md">{destination.location}</span>
+                <div className="flex items-start gap-2 mb-2 md:mb-3 text-white">
+                  <MapPin className="w-3.5 h-3.5 md:w-4 md:h-4 flex-shrink-0 mt-0.5 drop-shadow-md" />
+                  <span className="font-lato text-[13px] md:text-[14px] drop-shadow-md">{destination.location}</span>
                 </div>
-                <p className="font-lato text-sm leading-relaxed text-white/90 line-clamp-2 drop-shadow-md">
+                <p className="font-lato text-[13px] md:text-sm leading-relaxed text-white/90 line-clamp-2 drop-shadow-md">
                   {destination.description}
                 </p>
               </div>

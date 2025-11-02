@@ -75,21 +75,21 @@ const PlanYourTrip = () => {
   return <div className="min-h-screen py-12">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-4">Plan Your Trip to Harar</h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+        <div className="text-center mb-12 px-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Plan Your Trip to Harar</h1>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             Everything you need for a comfortable and memorable stay in Harar. From accommodations to transportation and expert guides.
           </p>
         </div>
 
         {/* Tabs for Categories */}
         <Tabs defaultValue="all" className="w-full">
-          <TabsList className="grid w-full grid-cols-2 lg:grid-cols-5 mb-8">
-            <TabsTrigger value="all">All</TabsTrigger>
-            <TabsTrigger value="hotels">Hotels</TabsTrigger>
-            <TabsTrigger value="guesthouses">Guest Houses</TabsTrigger>
-            <TabsTrigger value="car">Car Rental</TabsTrigger>
-            <TabsTrigger value="guides">Tour Guides</TabsTrigger>
+          <TabsList className="flex flex-wrap w-full h-auto justify-center gap-2 p-2 mb-8 bg-transparent">
+            <TabsTrigger value="all" className="flex-1 min-w-[140px] max-w-[200px]">All</TabsTrigger>
+            <TabsTrigger value="hotels" className="flex-1 min-w-[140px] max-w-[200px]">Hotels</TabsTrigger>
+            <TabsTrigger value="guesthouses" className="flex-1 min-w-[140px] max-w-[200px]">Guest Houses</TabsTrigger>
+            <TabsTrigger value="car" className="flex-1 min-w-[140px] max-w-[200px]">Car Rental</TabsTrigger>
+            <TabsTrigger value="guides" className="flex-1 min-w-[140px] max-w-[200px]">Tour Guides</TabsTrigger>
           </TabsList>
 
           {/* All Tab */}
@@ -132,20 +132,20 @@ const HotelsSection = ({
     name: string;
     phone: string;
   }>;
-}) => <div>
+}) => <div className="px-4 md:px-0">
     <div className="flex items-center mb-6">
-      <Hotel className="w-8 h-8 text-primary mr-3" />
-      <h2 className="text-3xl font-bold">Hotels</h2>
+      <Hotel className="w-7 h-7 md:w-8 md:h-8 text-primary mr-3" />
+      <h2 className="text-2xl md:text-3xl font-bold">Hotels</h2>
     </div>
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-      {hotels.map((hotel, index) => <Card key={index} className="hover:shadow-lg transition-shadow">
-          <CardHeader>
-            <CardTitle className="text-lg">{hotel.name}</CardTitle>
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+      {hotels.map((hotel, index) => <Card key={index} className="hover:shadow-lg transition-all duration-300 shadow-sm">
+          <CardHeader className="pb-3">
+            <CardTitle className="text-lg md:text-xl">{hotel.name}</CardTitle>
           </CardHeader>
           <CardContent>
-            <a href={`tel:${hotel.phone}`} className="flex items-center text-muted-foreground hover:text-primary">
+            <a href={`tel:${hotel.phone}`} className="flex items-center text-muted-foreground hover:text-primary transition-colors touch-manipulation min-h-[44px]">
               <Phone className="w-4 h-4 mr-2" />
-              {hotel.phone}
+              <span className="text-sm md:text-base">{hotel.phone}</span>
             </a>
           </CardContent>
         </Card>)}
@@ -158,31 +158,35 @@ const GuestHousesSection = ({
     name: string;
     phone: string;
   }>;
-}) => <div>
+}) => <div className="px-4 md:px-0">
     <div className="flex items-center mb-6">
-      <Home className="w-8 h-8 text-primary mr-3" />
-      <h2 className="text-3xl font-bold">Guest Houses</h2>
+      <Home className="w-7 h-7 md:w-8 md:h-8 text-primary mr-3" />
+      <h2 className="text-2xl md:text-3xl font-bold">Guest Houses</h2>
     </div>
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-      {guestHouses.map((guesthouse, index) => <Card key={index} className="hover:shadow-lg transition-shadow">
-          <CardHeader>
-            <CardTitle className="text-lg">{guesthouse.name}</CardTitle>
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+      {guestHouses.map((guesthouse, index) => <Card key={index} className="hover:shadow-lg transition-all duration-300 shadow-sm">
+          <CardHeader className="pb-3">
+            <CardTitle className="text-lg md:text-xl">{guesthouse.name}</CardTitle>
           </CardHeader>
           <CardContent>
-            <a href={`tel:${guesthouse.phone}`} className="flex items-center text-muted-foreground hover:text-primary">
+            <a href={`tel:${guesthouse.phone}`} className="flex items-center text-muted-foreground hover:text-primary transition-colors touch-manipulation min-h-[44px]">
               <Phone className="w-4 h-4 mr-2" />
-              {guesthouse.phone}
+              <span className="text-sm md:text-base">{guesthouse.phone}</span>
             </a>
           </CardContent>
         </Card>)}
     </div>
   </div>;
-const CarRentalSection = () => <div>
+const CarRentalSection = () => <div className="px-4 md:px-0">
     <div className="flex items-center mb-6">
-      <Car className="w-8 h-8 text-primary mr-3" />
-      <h2 className="text-3xl font-bold">Car Rental</h2>
+      <Car className="w-7 h-7 md:w-8 md:h-8 text-primary mr-3" />
+      <h2 className="text-2xl md:text-3xl font-bold">Car Rental</h2>
     </div>
-    
+    <Card className="max-w-2xl shadow-sm">
+      <CardContent className="p-6">
+        <p className="text-muted-foreground text-sm md:text-base">Car rental information coming soon. Please contact our tour guides for transportation arrangements.</p>
+      </CardContent>
+    </Card>
   </div>;
 const TourGuidesSection = ({
   guides
@@ -192,45 +196,45 @@ const TourGuidesSection = ({
     phone: string;
     email: string;
   }>;
-}) => <div id="guides">
+}) => <div id="guides" className="px-4 md:px-0">
     <div className="flex items-center mb-6">
-      <User className="w-8 h-8 text-primary mr-3" />
-      <h2 className="text-3xl font-bold">Professional Tour Guides</h2>
+      <User className="w-7 h-7 md:w-8 md:h-8 text-primary mr-3" />
+      <h2 className="text-2xl md:text-3xl font-bold">Professional Tour Guides</h2>
     </div>
-    <div className="grid md:grid-cols-2 gap-4">
-      {guides.map((guide, index) => <Card key={index} className="hover:shadow-lg transition-shadow">
-          <CardHeader>
-            <CardTitle className="text-xl">{guide.name}</CardTitle>
+    <div className="grid sm:grid-cols-2 gap-4 md:gap-5">
+      {guides.map((guide, index) => <Card key={index} className="hover:shadow-lg transition-all duration-300 shadow-sm">
+          <CardHeader className="pb-3">
+            <CardTitle className="text-lg md:text-xl">{guide.name}</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-2">
-            <a href={`tel:${guide.phone}`} className="flex items-center text-muted-foreground hover:text-primary">
+          <CardContent className="space-y-3">
+            <a href={`tel:${guide.phone}`} className="flex items-center text-muted-foreground hover:text-primary transition-colors touch-manipulation min-h-[44px]">
               <Phone className="w-4 h-4 mr-2" />
-              {guide.phone}
+              <span className="text-sm md:text-base">{guide.phone}</span>
             </a>
-            <a href={`mailto:${guide.email}`} className="flex items-center text-muted-foreground hover:text-primary">
+            <a href={`mailto:${guide.email}`} className="flex items-center text-muted-foreground hover:text-primary transition-colors touch-manipulation min-h-[44px]">
               <Mail className="w-4 h-4 mr-2" />
-              {guide.email}
+              <span className="text-sm md:text-base">{guide.email}</span>
             </a>
           </CardContent>
         </Card>)}
     </div>
   </div>;
-const PersonalAssistanceSection = () => <div className="mt-12">
-    <h2 className="text-3xl font-bold mb-6">Personal Assistance</h2>
-    <Card className="max-w-2xl hover:shadow-xl transition-shadow">
+const PersonalAssistanceSection = () => <div className="mt-12 px-4 md:px-0">
+    <h2 className="text-2xl md:text-3xl font-bold mb-6">Personal Assistance</h2>
+    <Card className="max-w-2xl hover:shadow-xl transition-all duration-300 shadow-sm">
       <CardHeader>
-        <CardTitle className="text-2xl">Olinaf Tesfaye</CardTitle>
-        <CardDescription className="text-lg">Personal travel assistance and consultation</CardDescription>
+        <CardTitle className="text-xl md:text-2xl">Olinaf Tesfaye</CardTitle>
+        <CardDescription className="text-base md:text-lg">Personal travel assistance and consultation</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
-        <div className="space-y-2">
-          <a href="tel:0925037003" className="flex items-center text-muted-foreground hover:text-primary">
+        <div className="space-y-3">
+          <a href="tel:0925037003" className="flex items-center text-muted-foreground hover:text-primary transition-colors touch-manipulation min-h-[44px]">
             <Phone className="w-4 h-4 mr-2" />
-            0925037003
+            <span className="text-sm md:text-base">0925037003</span>
           </a>
-          <a href="mailto:olinaftesfayea@gmail.com" className="flex items-center text-muted-foreground hover:text-primary">
+          <a href="mailto:olinaftesfayea@gmail.com" className="flex items-center text-muted-foreground hover:text-primary transition-colors touch-manipulation min-h-[44px]">
             <Mail className="w-4 h-4 mr-2" />
-            olinaftesfayea@gmail.com
+            <span className="text-sm md:text-base">olinaftesfayea@gmail.com</span>
           </a>
         </div>
       </CardContent>
