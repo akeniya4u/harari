@@ -54,9 +54,9 @@ const About = () => {
           {/* Hero Image */}
           <div className="mb-8">
             <img 
-              src={harariAlleyway} 
-              alt="Traditional Harari alleyway with white walls and distinctive architecture" 
-              className="w-full h-[400px] object-cover rounded-2xl shadow-xl"
+              src={harariCeremony} 
+              alt="Harari people in traditional dress during a cultural ceremony at the gate" 
+              className="w-full h-[500px] object-cover rounded-2xl shadow-xl"
             />
             <p className="text-center text-muted-foreground mt-4 italic">
               Harar's cultural identity lives through its architecture, colorful traditions, 
@@ -67,14 +67,14 @@ const About = () => {
           {/* Image Grid */}
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <img 
-              src={harariCeremony} 
-              alt="Harari people in traditional dress during a cultural ceremony at the gate" 
-              className="w-full h-[300px] object-cover rounded-xl shadow-lg"
+              src={harariAlleyway} 
+              alt="Traditional Harari alleyway with distinctive architecture" 
+              className="w-full h-[350px] object-cover rounded-xl shadow-lg"
             />
             <img 
               src={harariBaskets} 
               alt="Display of traditional Harari colorful baskets and crafts" 
-              className="w-full h-[300px] object-cover rounded-xl shadow-lg"
+              className="w-full h-[350px] object-cover rounded-xl shadow-lg"
             />
           </div>
 
@@ -82,12 +82,12 @@ const About = () => {
             <img 
               src={harariCouple} 
               alt="Harari couple in traditional wedding attire" 
-              className="w-full h-[250px] object-cover rounded-xl shadow-lg"
+              className="w-full h-[280px] object-cover rounded-xl shadow-lg"
             />
             <img 
               src={harariWoman} 
               alt="Harari woman wearing traditional embroidered dress" 
-              className="w-full h-[250px] object-cover rounded-xl shadow-lg"
+              className="w-full h-[280px] object-cover rounded-xl shadow-lg"
             />
             <div className="flex items-center justify-center bg-card rounded-xl shadow-lg p-6">
               <p className="text-center text-sm text-muted-foreground">

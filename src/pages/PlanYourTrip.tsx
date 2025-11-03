@@ -71,6 +71,14 @@ const PlanYourTrip = () => {
     name: "Henok Afework",
     phone: "+251914556677",
     email: "henokafework@gmail.com"
+  }, {
+    name: "Mehbub Harar",
+    phone: "+251911289654",
+    email: "mehbubharar@gmail.com"
+  }, {
+    name: "Testi Harar",
+    phone: "+251910829891",
+    email: "testiharar@gmail.com"
   }];
   return <div className="min-h-screen py-12">
       <div className="container mx-auto px-4">
