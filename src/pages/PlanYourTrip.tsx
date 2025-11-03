@@ -228,13 +228,13 @@ const PersonalAssistanceSection = () => <div className="mt-12 px-4 md:px-0">
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="space-y-3">
-          <a href="tel:0925037003" className="flex items-center text-muted-foreground hover:text-primary transition-colors touch-manipulation min-h-[44px]">
+          <a href="tel:+251922642867" className="flex items-center text-muted-foreground hover:text-primary transition-colors touch-manipulation min-h-[44px]">
             <Phone className="w-4 h-4 mr-2" />
-            <span className="text-sm md:text-base">0925037003</span>
+            <span className="text-sm md:text-base">+251 922 642 867</span>
           </a>
-          <a href="mailto:olinaftesfayea@gmail.com" className="flex items-center text-muted-foreground hover:text-primary transition-colors touch-manipulation min-h-[44px]">
+          <a href="mailto:visithararii@gmail.com" className="flex items-center text-muted-foreground hover:text-primary transition-colors touch-manipulation min-h-[44px]">
             <Mail className="w-4 h-4 mr-2" />
-            <span className="text-sm md:text-base">olinaftesfayea@gmail.com</span>
+            <span className="text-sm md:text-base">visithararii@gmail.com</span>
           </a>
         </div>
       </CardContent>

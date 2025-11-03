@@ -24,14 +24,14 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "info@visitharar.com",
-      link: "mailto:info@visitharar.com",
+      value: "visithararii@gmail.com",
+      link: "mailto:visithararii@gmail.com",
     },
     {
       icon: Phone,
       title: "Phone / WhatsApp",
-      value: "+251925037003",
-      link: "tel:+251925037003",
+      value: "+251 922 642 867",
+      link: "tel:+251922642867",
     },
     {
       icon: MapPin,
