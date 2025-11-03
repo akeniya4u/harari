@@ -8,6 +8,7 @@ const Footer = () => {
     { name: "Things To Do", path: "/things-to-do" },
     { name: "Invest in Harar", path: "/invest" },
     { name: "Plan Your Trip", path: "/plan-your-trip" },
+    { name: "About", path: "/about" },
     { name: "Contact Us", path: "/contact" },
   ];
 
