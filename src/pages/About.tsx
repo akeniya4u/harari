@@ -35,14 +35,30 @@ const About = () => {
                 Heritage Site.
               </p>
 
-              <Button 
-                size="lg" 
-                className="w-full sm:w-auto"
-                onClick={() => window.open('/documents/History_of_Harar_and_Harari-HNL.pdf', '_blank')}
-              >
-                <Download className="mr-2" />
-                Download Full History of Harar (Official Document)
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  size="lg" 
+                  className="flex-1 sm:flex-initial"
+                  onClick={() => window.open('/documents/History_of_Harar_and_Harari-HNL.pdf', '_blank')}
+                >
+                  <BookOpen className="mr-2" />
+                  View Full History of Harar
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="secondary"
+                  className="flex-1 sm:flex-initial"
+                  onClick={() => {
+                    const link = document.createElement('a');
+                    link.href = '/documents/History_of_Harar_and_Harari-HNL.pdf';
+                    link.download = 'History_of_Harar_and_Harari-HNL.pdf';
+                    link.click();
+                  }}
+                >
+                  <Download className="mr-2" />
+                  Download PDF
+                </Button>
+              </div>
             </CardContent>
           </Card>
         </section>

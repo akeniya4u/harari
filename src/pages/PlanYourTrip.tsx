@@ -188,13 +188,69 @@ const GuestHousesSection = ({
 const CarRentalSection = () => <div className="px-4 md:px-0">
     <div className="flex items-center mb-6">
       <Car className="w-7 h-7 md:w-8 md:h-8 text-primary mr-3" />
-      <h2 className="text-2xl md:text-3xl font-bold">Car Rental</h2>
+      <h2 className="text-2xl md:text-3xl font-bold">Car Rental in Dire Dawa</h2>
     </div>
-    <Card className="max-w-2xl shadow-sm">
-      <CardContent className="p-6">
-        <p className="text-muted-foreground text-sm md:text-base">Car rental information coming soon. Please contact our tour guides for transportation arrangements.</p>
-      </CardContent>
-    </Card>
+    <div className="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-5">
+      <Card className="hover:shadow-lg transition-all duration-300 shadow-sm">
+        <CardHeader className="pb-3">
+          <CardTitle className="text-lg md:text-xl">YM Car & Machinery Rental</CardTitle>
+          <CardDescription className="text-sm">Jemal Rogora Building, Dire Dawa, Ethiopia</CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-3">
+          <a href="tel:+251901780000" className="flex items-center text-muted-foreground hover:text-primary transition-colors touch-manipulation min-h-[44px]">
+            <Phone className="w-4 h-4 mr-2" />
+            <span className="text-sm md:text-base">+251 901 780 000</span>
+          </a>
+          <a href="https://goo.gl/maps/VFaxZL9o2oKko46N8" target="_blank" rel="noopener noreferrer" className="flex items-center text-muted-foreground hover:text-primary transition-colors touch-manipulation min-h-[44px]">
+            <Car className="w-4 h-4 mr-2" />
+            <span className="text-sm md:text-base">View on Google Maps</span>
+          </a>
+          <Button className="w-full mt-2" onClick={() => window.open('https://ymcarandmachineryrent.com/', '_blank')}>
+            Book Now
+          </Button>
+        </CardContent>
+      </Card>
+
+      <Card className="hover:shadow-lg transition-all duration-300 shadow-sm">
+        <CardHeader className="pb-3">
+          <CardTitle className="text-lg md:text-xl">GHY Car Rental & Tour</CardTitle>
+          <CardDescription className="text-sm">Near Samrat Hotel, Dire Dawa, Ethiopia</CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-3">
+          <a href="tel:+251910083639" className="flex items-center text-muted-foreground hover:text-primary transition-colors touch-manipulation min-h-[44px]">
+            <Phone className="w-4 h-4 mr-2" />
+            <span className="text-sm md:text-base">+251 910 083 639</span>
+          </a>
+          <a href="https://goo.gl/maps/Fvnp3dpHYZ95RZ178" target="_blank" rel="noopener noreferrer" className="flex items-center text-muted-foreground hover:text-primary transition-colors touch-manipulation min-h-[44px]">
+            <Car className="w-4 h-4 mr-2" />
+            <span className="text-sm md:text-base">View on Google Maps</span>
+          </a>
+          <Button className="w-full mt-2" onClick={() => window.open('tel:+251910083639', '_self')}>
+            Book Now
+          </Button>
+        </CardContent>
+      </Card>
+
+      <Card className="hover:shadow-lg transition-all duration-300 shadow-sm">
+        <CardHeader className="pb-3">
+          <CardTitle className="text-lg md:text-xl">Abel Asefa Car & Machinery Rent</CardTitle>
+          <CardDescription className="text-sm">HVR8+369, Dire Dawa, Ethiopia</CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-3">
+          <a href="tel:+251911770949" className="flex items-center text-muted-foreground hover:text-primary transition-colors touch-manipulation min-h-[44px]">
+            <Phone className="w-4 h-4 mr-2" />
+            <span className="text-sm md:text-base">+251 911 770 949</span>
+          </a>
+          <a href="https://goo.gl/maps/8yJ8nGWsm12SzG5t7" target="_blank" rel="noopener noreferrer" className="flex items-center text-muted-foreground hover:text-primary transition-colors touch-manipulation min-h-[44px]">
+            <Car className="w-4 h-4 mr-2" />
+            <span className="text-sm md:text-base">View on Google Maps</span>
+          </a>
+          <Button className="w-full mt-2" onClick={() => window.open('tel:+251911770949', '_self')}>
+            Book Now
+          </Button>
+        </CardContent>
+      </Card>
+    </div>
   </div>;
 const TourGuidesSection = ({
   guides
