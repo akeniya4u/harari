@@ -1,28 +1,60 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import HeroSection from "@/components/HeroSection";
-import heroImage from "@/assets/hero-building.jpg";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import traditionalCraftsImage from "@/assets/traditional-crafts.jpg";
 import culturalGatheringImage from "@/assets/cultural-gathering.jpg";
 import gateWisdomImage from "@/assets/gate-wisdom.jpg";
+import hararSign from "@/assets/harar-sign.jpg";
+import cityOfPeaceWall from "@/assets/city-of-peace-wall.jpg";
+import hararGateEntrance from "@/assets/harar-gate-entrance.jpg";
 import { MapPin, Users, Building2, ArrowRight, Landmark, Coins, Shield, Globe } from "lucide-react";
+import { useEffect, useState } from "react";
+import type { CarouselApi } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 const Home = () => {
-  const features = [{
-    icon: MapPin,
-    title: "UNESCO World Heritage",
-    description: "Explore the ancient walled city recognized by UNESCO for its cultural significance."
-  }, {
-    icon: Users,
-    title: "Rich Culture",
-    description: "Experience unique Harari traditions, festivals, and warm hospitality."
-  }, {
-    icon: Building2,
-    title: "Historic Architecture",
-    description: "Discover traditional Harari houses and the iconic Jegol Wall."
-  }];
+  const heroImages = [
+    { src: hararSign, alt: "Harar Sign - The Living Museum" },
+    { src: cityOfPeaceWall, alt: "City of Peace Wall in Harar" },
+    { src: hararGateEntrance, alt: "Historic Gate Entrance to Harar" }
+  ];
+
   return <div className="min-h-screen">
-      <HeroSection title="Welcome to Harar" subtitle="The City of Peace and Heritage" image={heroImage} ctaText="Explore Harar" ctaLink="#explore" />
+      {/* Hero Carousel */}
+      <section className="relative h-[600px] overflow-hidden">
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[
+            Autoplay({
+              delay: 5000,
+            }),
+          ]}
+          className="w-full h-full"
+        >
+          <CarouselContent className="h-[600px]">
+            {heroImages.map((image, index) => (
+              <CarouselItem key={index} className="h-[600px]">
+                <div className="relative w-full h-full">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/50 to-background/40" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <h1 className="text-5xl md:text-7xl font-bold text-white text-center px-4 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
+                      HARAR – The Living Museum
+                    </h1>
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+      </section>
 
       {/* UNESCO City of Peace Section */}
       <section id="explore" className="py-20 bg-gradient-to-b from-background via-muted/30 to-background">
