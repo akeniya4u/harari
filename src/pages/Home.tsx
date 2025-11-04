@@ -20,40 +20,25 @@ const Home = () => {
   ];
 
   return <div className="min-h-screen">
-      {/* Hero Carousel */}
-      <section className="relative h-[600px] overflow-hidden">
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          plugins={[
-            Autoplay({
-              delay: 5000,
-            }),
-          ]}
-          className="w-full h-full"
+      {/* Full-Screen Hero Section */}
+      <section className="relative w-screen h-screen overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${hararSign})` }}
         >
-          <CarouselContent className="h-[600px]">
-            {heroImages.map((image, index) => (
-              <CarouselItem key={index} className="h-[600px]">
-                <div className="relative w-full h-full">
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/50 to-background/40" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <h1 className="text-5xl md:text-7xl font-bold text-white text-center px-4 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
-                      HARAR – The Living Museum
-                    </h1>
-                  </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
+          {/* Light Overlay */}
+          <div className="absolute inset-0 bg-black/40" />
+        </div>
+        
+        {/* Centered Text Content */}
+        <div className="relative z-10 flex flex-col items-center justify-center h-full px-4">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white text-center mb-4 animate-fade-in drop-shadow-[0_4px_16px_rgba(0,0,0,0.8)]">
+            HARAR
+          </h1>
+          <p className="text-2xl md:text-4xl lg:text-5xl text-white text-center font-light animate-fade-in drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+            The Living Museum
+          </p>
+        </div>
       </section>
 
       {/* UNESCO City of Peace Section */}
