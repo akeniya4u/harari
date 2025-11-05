@@ -95,23 +95,29 @@ const About = () => {
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
                   <Button 
                     size="lg"
-                    onClick={() => window.open('/documents/History_of_Harar_and_Harari-HNL.pdf', '_blank')}
+                    asChild
                   >
-                    <BookOpen className="mr-2" />
-                    View Full History
+                    <a 
+                      href="/documents/History_of_Harar_and_Harari-HNL.pdf" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <BookOpen className="mr-2" />
+                      View Full History
+                    </a>
                   </Button>
                   <Button 
                     size="lg" 
                     variant="secondary"
-                    onClick={() => {
-                      const link = document.createElement('a');
-                      link.href = '/documents/History_of_Harar_and_Harari-HNL.pdf';
-                      link.download = 'History_of_Harar_and_Harari-HNL.pdf';
-                      link.click();
-                    }}
+                    asChild
                   >
-                    <Download className="mr-2" />
-                    Download PDF
+                    <a 
+                      href="/documents/History_of_Harar_and_Harari-HNL.pdf" 
+                      download="Harar-History.pdf"
+                    >
+                      <Download className="mr-2" />
+                      Download PDF
+                    </a>
                   </Button>
                 </div>
               </div>
