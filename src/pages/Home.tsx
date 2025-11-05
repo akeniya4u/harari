@@ -58,8 +58,6 @@ const Home = () => {
                     alt={image.alt}
                     className="w-full h-full object-cover"
                   />
-                  {/* Subtle overlay for text readability */}
-                  <div className="absolute inset-0 bg-black/30" />
                 </div>
               </CarouselItem>
             ))}
@@ -67,10 +65,10 @@ const Home = () => {
 
           {/* Centered Text Overlay */}
           <div className="absolute inset-0 flex flex-col items-center justify-center z-20 px-4 pointer-events-none">
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white text-center mb-6 animate-fade-in drop-shadow-[0_8px_24px_rgba(0,0,0,0.9)]">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white text-center mb-6 animate-fade-in drop-shadow-[0_10px_30px_rgba(0,0,0,1)] [text-shadow:_2px_2px_8px_rgb(0_0_0_/_100%),_-2px_-2px_8px_rgb(0_0_0_/_100%),_2px_-2px_8px_rgb(0_0_0_/_100%),_-2px_2px_8px_rgb(0_0_0_/_100%)]">
               HARAR
             </h1>
-            <p className="text-xl md:text-3xl lg:text-4xl text-white text-center font-light tracking-[0.3em] uppercase animate-fade-in drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
+            <p className="text-xl md:text-3xl lg:text-4xl text-white text-center font-light tracking-[0.3em] uppercase animate-fade-in drop-shadow-[0_6px_20px_rgba(0,0,0,1)] [text-shadow:_1px_1px_6px_rgb(0_0_0_/_100%),_-1px_-1px_6px_rgb(0_0_0_/_100%),_1px_-1px_6px_rgb(0_0_0_/_100%),_-1px_1px_6px_rgb(0_0_0_/_100%)]">
               The Living Museum
             </p>
           </div>
