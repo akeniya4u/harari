@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import traditionalCraftsImage from "@/assets/traditional-crafts.jpg";
 import culturalGatheringImage from "@/assets/cultural-gathering.jpg";
 import gateWisdomImage from "@/assets/gate-wisdom.jpg";
@@ -19,26 +19,82 @@ const Home = () => {
     { src: hararGateEntrance, alt: "Historic Gate Entrance to Harar" }
   ];
 
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
   return <div className="min-h-screen">
-      {/* Full-Screen Hero Section */}
+      {/* Full-Screen Hero Slideshow */}
       <section className="relative w-screen h-screen overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${hararSign})` }}
+        <Carousel
+          setApi={setApi}
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[
+            Autoplay({
+              delay: 5000,
+              stopOnInteraction: false,
+            }),
+          ]}
+          className="w-full h-full"
         >
-          {/* Light Overlay */}
-          <div className="absolute inset-0 bg-black/40" />
-        </div>
-        
-        {/* Centered Text Content */}
-        <div className="relative z-10 flex flex-col items-center justify-center h-full px-4">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white text-center mb-4 animate-fade-in drop-shadow-[0_4px_16px_rgba(0,0,0,0.8)]">
-            HARAR
-          </h1>
-          <p className="text-2xl md:text-4xl lg:text-5xl text-white text-center font-light animate-fade-in drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
-            The Living Museum
-          </p>
-        </div>
+          <CarouselContent className="h-screen">
+            {heroImages.map((image, index) => (
+              <CarouselItem key={index} className="h-screen">
+                <div className="relative w-full h-full">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover"
+                  />
+                  {/* Subtle overlay for text readability */}
+                  <div className="absolute inset-0 bg-black/30" />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+
+          {/* Centered Text Overlay */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center z-20 px-4 pointer-events-none">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white text-center mb-6 animate-fade-in drop-shadow-[0_8px_24px_rgba(0,0,0,0.9)]">
+              HARAR
+            </h1>
+            <p className="text-xl md:text-3xl lg:text-4xl text-white text-center font-light tracking-[0.3em] uppercase animate-fade-in drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
+              The Living Museum
+            </p>
+          </div>
+
+          {/* Navigation Arrows */}
+          <CarouselPrevious className="left-4 md:left-8 bg-white/20 hover:bg-white/30 border-white/40 text-white backdrop-blur-sm pointer-events-auto" />
+          <CarouselNext className="right-4 md:right-8 bg-white/20 hover:bg-white/30 border-white/40 text-white backdrop-blur-sm pointer-events-auto" />
+
+          {/* Slide Indicators */}
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+            {heroImages.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => api?.scrollTo(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  current === index
+                    ? "bg-white w-8"
+                    : "bg-white/50 hover:bg-white/75"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+        </Carousel>
       </section>
 
       {/* UNESCO City of Peace Section */}
