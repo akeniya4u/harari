@@ -20,14 +20,14 @@ const About = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${harariCeremony})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/20" />
         </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center max-w-4xl animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)] [text-shadow:_2px_2px_8px_rgb(0_0_0_/_90%)]">
             Harar, The Living Museum
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground">
+          <p className="text-xl md:text-2xl text-muted-foreground drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] [text-shadow:_1px_1px_6px_rgb(0_0_0_/_90%)]">
             A city that preserves history, culture, and identity across centuries.
           </p>
         </div>
