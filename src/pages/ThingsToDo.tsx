@@ -3,33 +3,57 @@ import natureImage from "@/assets/harar-alleyway-night.jpg";
 import culturalImage from "@/assets/harari-women-ceremony.jpg";
 import marketsImage from "@/assets/hyena-feeding-night.jpg";
 import museumImage from "@/assets/city-peace-alleyway.jpg";
-import { Compass, Users, Mountain, BookOpen } from "lucide-react";
+import { Coffee, PawPrint, Moon, ShoppingBag, Landmark, Utensils, Camera, Music } from "lucide-react";
 
 const ThingsToDo = () => {
   const experiences = [
     {
-      icon: Mountain,
-      title: "Nature Experience",
-      description: "Explore Harar's surrounding landscapes and green valleys. Discover the natural beauty of the Ethiopian highlands with guided nature walks and scenic viewpoints.",
-      image: natureImage,
-    },
-    {
-      icon: Users,
-      title: "Cultural Experience",
-      description: "Learn Harari traditions, festivals, and daily lifestyle. Participate in traditional coffee ceremonies, witness colorful festivals, and engage with local communities.",
+      icon: Coffee,
+      title: "Coffee Experience",
+      description: "Join a traditional Harari coffee ceremony. Watch locals roast, grind, and brew coffee the authentic way. Enjoy the aroma and taste while learning the history behind Harar coffee, one of Ethiopia's finest.",
       image: culturalImage,
     },
     {
-      icon: Compass,
-      title: "Outdoor and Adventure",
-      description: "Experience hiking, local markets, and the famous hyena feeding. Join evening hyena feeding sessions and explore bustling traditional markets filled with spices and crafts.",
+      icon: PawPrint,
+      title: "Egile Feeding Experience",
+      description: "Visit the Egile feeding area where locals interact with wild animals in harmony. This unique tradition shows the peaceful coexistence between people and nature.",
+      image: natureImage,
+    },
+    {
+      icon: Moon,
+      title: "Hyena Feeding at Night",
+      description: "Watch the famous Harar hyena feeding ritual after sunset. See how locals hand-feed hyenas outside the city walls, a tradition passed down for generations.",
       image: marketsImage,
     },
     {
-      icon: BookOpen,
-      title: "Research and Educational Travel",
-      description: "Visit museums and historical archives for cultural studies. Access rare manuscripts, historical documents, and learn about Islamic heritage and Harari history.",
+      icon: ShoppingBag,
+      title: "Market and Street Life",
+      description: "Walk through Harar's colorful markets filled with spices, fabrics, baskets, and silver jewelry. Capture the energy of local trade and daily life in narrow streets.",
+      image: natureImage,
+    },
+    {
+      icon: Landmark,
+      title: "Historic Sites and Museums",
+      description: "Explore Harar Jugol's ancient walls, mosques, and shrines. Visit Arthur Rimbaud's house museum to see Harar's link to world history and art.",
       image: museumImage,
+    },
+    {
+      icon: Utensils,
+      title: "Food Tour",
+      description: "Taste traditional Harari dishes like boko, muttaq, and harari tibs. Enjoy home-cooked meals with local families for an authentic food experience.",
+      image: culturalImage,
+    },
+    {
+      icon: Camera,
+      title: "Photography Tour",
+      description: "Capture the beauty of Harar's streets, doors, and faces. Early morning and late afternoon light make the best photography hours.",
+      image: museumImage,
+    },
+    {
+      icon: Music,
+      title: "Cultural Night Experience",
+      description: "Join a Harari music and dance evening during festivals or weddings. Experience Alaa dance, drum rhythms, and traditional songs in a joyful atmosphere.",
+      image: culturalImage,
     },
   ];
 
