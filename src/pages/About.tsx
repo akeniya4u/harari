@@ -10,6 +10,7 @@ import cityOfPeaceWall from "@/assets/city-of-peace-wall.jpg";
 import harariBaskets from "@/assets/harari-baskets-display.jpg";
 import traditionalCrafts from "@/assets/traditional-crafts.jpg";
 import hararAlleywayNight from "@/assets/harar-alleyway-night.jpg";
+import hararHeroAbout from "@/assets/harar-hero-about.jpg";
 
 const About = () => {
   return (
@@ -18,9 +19,9 @@ const About = () => {
       <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${harariCeremony})` }}
+          style={{ backgroundImage: `url(${hararHeroAbout})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/20" />
+          <div className="absolute inset-0 bg-black/25" />
         </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center max-w-4xl animate-fade-in">
