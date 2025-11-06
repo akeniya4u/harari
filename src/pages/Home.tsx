@@ -166,7 +166,7 @@ const Home = () => {
                   alt="Historic Gates of Harar" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-background/10 to-transparent" />
                 <div className="absolute bottom-8 left-8 right-8">
                   <h3 className="text-3xl font-bold text-primary-foreground mb-2">The Sacred Gates</h3>
                   <p className="text-primary-foreground/90">Five entrances to a city steeped in spiritual heritage</p>
@@ -231,7 +231,7 @@ const Home = () => {
                 alt="Traditional Harari Crafts and Basketry" 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/85 to-transparent flex items-end p-8">
+              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent flex items-end p-8">
                 <div>
                   <h3 className="text-3xl font-bold text-primary-foreground mb-2">Living Heritage</h3>
                   <p className="text-primary-foreground/90">Where ancient traditions meet daily life</p>
@@ -245,7 +245,7 @@ const Home = () => {
                 alt="Cultural Gathering in Harar" 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/85 to-transparent flex items-end p-8">
+              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent flex items-end p-8">
                 <div>
                   <h3 className="text-3xl font-bold text-primary-foreground mb-2">Cultural Treasures</h3>
                   <p className="text-primary-foreground/90">A tapestry of faith, art, and community</p>
