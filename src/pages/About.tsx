@@ -11,27 +11,17 @@ import harariBaskets from "@/assets/harari-baskets-display.jpg";
 import traditionalCrafts from "@/assets/traditional-crafts.jpg";
 import hararAlleywayNight from "@/assets/harar-alleyway-night.jpg";
 import hararHeroAbout from "@/assets/harar-hero-about.jpg";
-
 const About = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       {/* Header Section */}
       <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${hararHeroAbout})` }}
-        >
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+        backgroundImage: `url(${hararHeroAbout})`
+      }}>
           <div className="absolute inset-0 bg-black/25" />
         </div>
         
-        <div className="relative z-10 container mx-auto px-4 text-center max-w-4xl animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)] [text-shadow:_2px_2px_8px_rgb(0_0_0_/_90%)]">
-            Harar, The Living Museum
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] [text-shadow:_1px_1px_6px_rgb(0_0_0_/_90%)]">
-            A city that preserves history, culture, and identity across centuries.
-          </p>
-        </div>
+        
       </section>
 
       {/* Section 1: Harari Cultural Heritage */}
@@ -45,32 +35,16 @@ const About = () => {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Card className="overflow-hidden hover-scale shadow-lg">
-                <img 
-                  src={culturalGathering} 
-                  alt="Harari festival parade"
-                  className="w-full h-[280px] object-cover"
-                />
+                <img src={culturalGathering} alt="Harari festival parade" className="w-full h-[280px] object-cover" />
               </Card>
               <Card className="overflow-hidden hover-scale shadow-lg">
-                <img 
-                  src={harariAlleyway} 
-                  alt="Harar old street"
-                  className="w-full h-[280px] object-cover"
-                />
+                <img src={harariAlleyway} alt="Harar old street" className="w-full h-[280px] object-cover" />
               </Card>
               <Card className="overflow-hidden hover-scale shadow-lg">
-                <img 
-                  src={culturalExperience} 
-                  alt="Harari traditional house"
-                  className="w-full h-[280px] object-cover"
-                />
+                <img src={culturalExperience} alt="Harari traditional house" className="w-full h-[280px] object-cover" />
               </Card>
               <Card className="overflow-hidden hover-scale shadow-lg">
-                <img 
-                  src={harariCouple} 
-                  alt="Harari couple in traditional attire"
-                  className="w-full h-[280px] object-cover"
-                />
+                <img src={harariCouple} alt="Harari couple in traditional attire" className="w-full h-[280px] object-cover" />
               </Card>
             </div>
           </div>
@@ -94,28 +68,14 @@ const About = () => {
                   of cultural preservation and resilience.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                  <Button 
-                    size="lg"
-                    asChild
-                  >
-                    <a 
-                      href="/documents/History_of_Harar_and_Harari-HNL.pdf" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                    >
+                  <Button size="lg" asChild>
+                    <a href="/documents/History_of_Harar_and_Harari-HNL.pdf" target="_blank" rel="noopener noreferrer">
                       <BookOpen className="mr-2" />
                       View Full History
                     </a>
                   </Button>
-                  <Button 
-                    size="lg" 
-                    variant="secondary"
-                    asChild
-                  >
-                    <a 
-                      href="/documents/History_of_Harar_and_Harari-HNL.pdf" 
-                      download="Harar-History.pdf"
-                    >
+                  <Button size="lg" variant="secondary" asChild>
+                    <a href="/documents/History_of_Harar_and_Harari-HNL.pdf" download="Harar-History.pdf">
                       <Download className="mr-2" />
                       Download PDF
                     </a>
@@ -124,11 +84,7 @@ const About = () => {
               </div>
               
               <Card className="overflow-hidden shadow-xl animate-fade-in">
-                <img 
-                  src={cityOfPeaceWall} 
-                  alt="Harar Jugol Wall"
-                  className="w-full h-[500px] object-cover"
-                />
+                <img src={cityOfPeaceWall} alt="Harar Jugol Wall" className="w-full h-[500px] object-cover" />
               </Card>
             </div>
           </div>
@@ -150,11 +106,7 @@ const About = () => {
             
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="overflow-hidden shadow-xl hover-scale">
-                <img 
-                  src={harariCeremony} 
-                  alt="Harari wedding ceremony"
-                  className="w-full h-[400px] object-cover"
-                />
+                <img src={harariCeremony} alt="Harari wedding ceremony" className="w-full h-[400px] object-cover" />
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold mb-2">Traditional Ceremonies</h3>
                   <p className="text-muted-foreground">
@@ -164,11 +116,7 @@ const About = () => {
               </Card>
               
               <Card className="overflow-hidden shadow-xl hover-scale">
-                <img 
-                  src={traditionalCrafts} 
-                  alt="Harari handicrafts"
-                  className="w-full h-[400px] object-cover"
-                />
+                <img src={traditionalCrafts} alt="Harari handicrafts" className="w-full h-[400px] object-cover" />
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold mb-2">Artisan Handicrafts</h3>
                   <p className="text-muted-foreground">
@@ -187,11 +135,7 @@ const About = () => {
           <div className="max-w-6xl mx-auto">
             <Card className="overflow-hidden shadow-xl">
               <div className="grid lg:grid-cols-2">
-                <img 
-                  src={hararAlleywayNight} 
-                  alt="Harar city night view"
-                  className="w-full h-full object-cover min-h-[400px]"
-                />
+                <img src={hararAlleywayNight} alt="Harar city night view" className="w-full h-full object-cover min-h-[400px]" />
                 <CardContent className="p-12 flex flex-col justify-center">
                   <h2 className="text-4xl font-bold mb-6">A Living Heritage in the Modern Era</h2>
                   <p className="text-lg leading-relaxed text-muted-foreground mb-6">
@@ -210,8 +154,6 @@ const About = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default About;
