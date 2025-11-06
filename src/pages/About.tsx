@@ -4,7 +4,7 @@ import { Download, BookOpen } from "lucide-react";
 import harariCeremony from "@/assets/harari-traditional-ceremony.jpg";
 import culturalGathering from "@/assets/cultural-gathering.jpg";
 import harariAlleyway from "@/assets/harari-alleyway-white.jpg";
-import culturalExperience from "@/assets/cultural-experience.jpg";
+
 import harariCouple from "@/assets/harari-couple-traditional.jpg";
 import cityOfPeaceWall from "@/assets/city-of-peace-wall.jpg";
 import harariBaskets from "@/assets/harari-baskets-display.jpg";
@@ -39,9 +39,6 @@ const About = () => {
               </Card>
               <Card className="overflow-hidden hover-scale shadow-lg">
                 <img src={harariAlleyway} alt="Harar old street" className="w-full h-[280px] object-cover" />
-              </Card>
-              <Card className="overflow-hidden hover-scale shadow-lg">
-                <img src={culturalExperience} alt="Harari traditional house" className="w-full h-[280px] object-cover" />
               </Card>
               <Card className="overflow-hidden hover-scale shadow-lg">
                 <img src={harariCouple} alt="Harari couple in traditional attire" className="w-full h-[280px] object-cover" />
