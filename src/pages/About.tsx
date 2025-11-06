@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Download, BookOpen } from "lucide-react";
-import harariCeremony from "@/assets/harari-ceremony-gate.jpg";
+import harariCeremony from "@/assets/harari-traditional-ceremony.jpg";
 import culturalGathering from "@/assets/cultural-gathering.jpg";
 import harariAlleyway from "@/assets/harari-alleyway-white.jpg";
 import culturalExperience from "@/assets/cultural-experience.jpg";

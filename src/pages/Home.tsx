@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import traditionalCraftsImage from "@/assets/traditional-crafts.jpg";
-import culturalGatheringImage from "@/assets/cultural-gathering.jpg";
+import culturalGatheringImage from "@/assets/harar-night-street.jpg";
 import gateWisdomImage from "@/assets/gate-wisdom.jpg";
 import hararSign from "@/assets/harar-sign.jpg";
 import cityOfPeaceWall from "@/assets/city-of-peace-wall.jpg";
