@@ -13,56 +13,43 @@ import { useEffect, useState } from "react";
 import type { CarouselApi } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 const Home = () => {
-  const heroImages = [
-    { src: hararSign, alt: "Harar Sign - The Living Museum" },
-    { src: cityOfPeaceWall, alt: "City of Peace Wall in Harar" },
-    { src: hararGateEntrance, alt: "Historic Gate Entrance to Harar" }
-  ];
-
+  const heroImages = [{
+    src: hararSign,
+    alt: "Harar Sign - The Living Museum"
+  }, {
+    src: cityOfPeaceWall,
+    alt: "City of Peace Wall in Harar"
+  }, {
+    src: hararGateEntrance,
+    alt: "Historic Gate Entrance to Harar"
+  }];
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
-
   useEffect(() => {
     if (!api) return;
-
     setCurrent(api.selectedScrollSnap());
-
     api.on("select", () => {
       setCurrent(api.selectedScrollSnap());
     });
   }, [api]);
-
   return <div className="min-h-screen">
       {/* Full-Screen Hero Slideshow */}
       <section className="relative w-screen h-screen overflow-hidden">
-        <Carousel
-          setApi={setApi}
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          plugins={[
-            Autoplay({
-              delay: 5000,
-              stopOnInteraction: false,
-            }),
-          ]}
-          className="w-full h-full"
-        >
+        <Carousel setApi={setApi} opts={{
+        align: "start",
+        loop: true
+      }} plugins={[Autoplay({
+        delay: 5000,
+        stopOnInteraction: false
+      })]} className="w-full h-full">
           <CarouselContent className="h-screen">
-            {heroImages.map((image, index) => (
-              <CarouselItem key={index} className="h-screen">
+            {heroImages.map((image, index) => <CarouselItem key={index} className="h-screen">
                 <div className="relative w-full h-full">
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-cover"
-                  />
+                  <img src={image.src} alt={image.alt} className="w-full h-full object-cover" />
                   {/* Subtle overlay for text readability */}
                   <div className="absolute inset-0 bg-black/30" />
                 </div>
-              </CarouselItem>
-            ))}
+              </CarouselItem>)}
           </CarouselContent>
 
           {/* Centered Text Overlay */}
@@ -81,18 +68,7 @@ const Home = () => {
 
           {/* Slide Indicators */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
-            {heroImages.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => api?.scrollTo(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  current === index
-                    ? "bg-white w-8"
-                    : "bg-white/50 hover:bg-white/75"
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
+            {heroImages.map((_, index) => <button key={index} onClick={() => api?.scrollTo(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${current === index ? "bg-white w-8" : "bg-white/50 hover:bg-white/75"}`} aria-label={`Go to slide ${index + 1}`} />)}
           </div>
         </Carousel>
       </section>
@@ -161,11 +137,7 @@ const Home = () => {
           <div className="max-w-6xl mx-auto mb-16">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="relative h-[500px] rounded-2xl overflow-hidden group shadow-elegant">
-                <img 
-                  src={gateWisdomImage} 
-                  alt="Historic Gates of Harar" 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
-                />
+                <img src={gateWisdomImage} alt="Historic Gates of Harar" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-background/10 to-transparent" />
                 <div className="absolute bottom-8 left-8 right-8">
                   <h3 className="text-3xl font-bold text-primary-foreground mb-2">The Sacred Gates</h3>
@@ -226,31 +198,18 @@ const Home = () => {
           {/* Cultural Heritage Showcase */}
           <div className="grid md:grid-cols-2 gap-8">
             <div className="relative h-96 rounded-2xl overflow-hidden group shadow-elegant">
-              <img 
-                src={traditionalCraftsImage} 
-                alt="Traditional Harari Crafts and Basketry" 
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
-              />
+              <img src={traditionalCraftsImage} alt="Traditional Harari Crafts and Basketry" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent flex items-end p-8">
                 <div>
-                  <h3 className="text-3xl font-bold text-primary-foreground mb-2">Living Heritage</h3>
-                  <p className="text-primary-foreground/90">Where ancient traditions meet daily life</p>
+                  
+                  
                 </div>
               </div>
             </div>
 
             <div className="relative h-96 rounded-2xl overflow-hidden group shadow-elegant">
-              <img 
-                src={culturalGatheringImage} 
-                alt="Cultural Gathering in Harar" 
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent flex items-end p-8">
-                <div>
-                  <h3 className="text-3xl font-bold text-primary-foreground mb-2">Cultural Treasures</h3>
-                  <p className="text-primary-foreground/90">A tapestry of faith, art, and community</p>
-                </div>
-              </div>
+              <img src={culturalGatheringImage} alt="Cultural Gathering in Harar" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              
             </div>
           </div>
         </div>
