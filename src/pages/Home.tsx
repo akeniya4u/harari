@@ -139,10 +139,7 @@ const Home = () => {
               <div className="relative h-[500px] rounded-2xl overflow-hidden group shadow-elegant">
                 <img src={gateWisdomImage} alt="Historic Gates of Harar" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-background/10 to-transparent" />
-                <div className="absolute bottom-8 left-8 right-8">
-                  <h3 className="text-3xl font-bold text-primary-foreground mb-2">The Sacred Gates</h3>
-                  <p className="text-primary-foreground/90">Five entrances to a city steeped in spiritual heritage</p>
-                </div>
+                
               </div>
 
               <div className="space-y-6">
