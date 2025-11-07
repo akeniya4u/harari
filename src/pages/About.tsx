@@ -14,11 +14,7 @@ const About = () => {
   return <div className="min-h-screen">
       {/* Header Section */}
       <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-        backgroundImage: `url(${hararHeroAbout})`
-      }}>
-          
-        </div>
+        
         
         
       </section>
