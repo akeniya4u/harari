@@ -4,7 +4,6 @@ import { Download, BookOpen } from "lucide-react";
 import harariCeremony from "@/assets/harari-traditional-ceremony.jpg";
 import culturalGathering from "@/assets/cultural-gathering.jpg";
 import harariAlleyway from "@/assets/harari-alleyway-white.jpg";
-
 import harariCouple from "@/assets/harari-couple-traditional.jpg";
 import cityOfPeaceWall from "@/assets/city-of-peace-wall.jpg";
 import harariBaskets from "@/assets/harari-baskets-display.jpg";
@@ -18,7 +17,7 @@ const About = () => {
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
         backgroundImage: `url(${hararHeroAbout})`
       }}>
-          <div className="absolute inset-0 bg-black/25" />
+          
         </div>
         
         
@@ -26,26 +25,7 @@ const About = () => {
 
       {/* Section 1: Harari Cultural Heritage */}
       <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-4">Harari Cultural Heritage</h2>
-            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Harar's vibrant culture is reflected in its architecture, colors, and traditions.
-            </p>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Card className="overflow-hidden hover-scale shadow-lg">
-                <img src={culturalGathering} alt="Harari festival parade" className="w-full h-[280px] object-cover" />
-              </Card>
-              <Card className="overflow-hidden hover-scale shadow-lg">
-                <img src={harariAlleyway} alt="Harar old street" className="w-full h-[280px] object-cover" />
-              </Card>
-              <Card className="overflow-hidden hover-scale shadow-lg">
-                <img src={harariCouple} alt="Harari couple in traditional attire" className="w-full h-[280px] object-cover" />
-              </Card>
-            </div>
-          </div>
-        </div>
+        
       </section>
 
       {/* Section 2: The Harari Legacy */}
