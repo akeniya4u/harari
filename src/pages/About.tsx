@@ -8,7 +8,7 @@ import harariCouple from "@/assets/harari-couple-traditional.jpg";
 import cityOfPeaceWall from "@/assets/city-of-peace-wall.jpg";
 import harariBaskets from "@/assets/harari-baskets-display.jpg";
 import traditionalCrafts from "@/assets/traditional-crafts.jpg";
-import hararAlleywayNight from "@/assets/harar-alleyway-night.jpg";
+import hararBlueAlleyway from "@/assets/harar-blue-alleyway.jpg";
 import hararHeroAbout from "@/assets/harar-hero-about.jpg";
 const About = () => {
   return <div className="min-h-screen">
@@ -104,7 +104,7 @@ const About = () => {
           <div className="max-w-6xl mx-auto">
             <Card className="overflow-hidden shadow-xl">
               <div className="grid lg:grid-cols-2">
-                <img src={hararAlleywayNight} alt="Harar city night view" className="w-full h-full object-cover min-h-[400px]" />
+                <img src={hararBlueAlleyway} alt="Harar blue alleyway" className="w-full h-full object-cover min-h-[400px]" />
                 <CardContent className="p-12 flex flex-col justify-center">
                   <h2 className="text-4xl font-bold mb-6">A Living Heritage in the Modern Era</h2>
                   <p className="text-lg leading-relaxed text-muted-foreground mb-6">
