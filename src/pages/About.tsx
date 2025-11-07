@@ -13,11 +13,7 @@ import hararHeroAbout from "@/assets/harar-hero-about.jpg";
 const About = () => {
   return <div className="min-h-screen">
       {/* Header Section */}
-      <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
-        
-        
-        
-      </section>
+      
 
       {/* Section 1: Harari Cultural Heritage */}
       <section className="py-20 bg-muted/30">
