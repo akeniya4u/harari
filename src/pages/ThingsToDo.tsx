@@ -1,8 +1,11 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import natureImage from "@/assets/harar-alleyway-night.jpg";
 import culturalImage from "@/assets/harari-women-ceremony.jpg";
-import marketsImage from "@/assets/hyena-feeding-night.jpg";
-import museumImage from "@/assets/city-peace-alleyway.jpg";
+import coffeeImage from "@/assets/coffee-ceremony-harar.jpg";
+import hyenaImage from "@/assets/hyena-feeding-harar.jpg";
+import marketsImage from "@/assets/harar-markets.jpg";
+import museumImage from "@/assets/harar-historic-archway.jpg";
+import foodImage from "@/assets/harar-traditional-food.jpg";
 import { Coffee, PawPrint, Moon, ShoppingBag, Landmark, Utensils, Camera, Music } from "lucide-react";
 
 const ThingsToDo = () => {
@@ -11,7 +14,7 @@ const ThingsToDo = () => {
       icon: Coffee,
       title: "Coffee Experience",
       description: "Join a traditional Harari coffee ceremony. Watch locals roast, grind, and brew coffee the authentic way. Enjoy the aroma and taste while learning the history behind Harar coffee, one of Ethiopia's finest.",
-      image: culturalImage,
+      image: coffeeImage,
     },
     {
       icon: PawPrint,
@@ -23,13 +26,13 @@ const ThingsToDo = () => {
       icon: Moon,
       title: "Hyena Feeding at Night",
       description: "Watch the famous Harar hyena feeding ritual after sunset. See how locals hand-feed hyenas outside the city walls, a tradition passed down for generations.",
-      image: marketsImage,
+      image: hyenaImage,
     },
     {
       icon: ShoppingBag,
       title: "Market and Street Life",
       description: "Walk through Harar's colorful markets filled with spices, fabrics, baskets, and silver jewelry. Capture the energy of local trade and daily life in narrow streets.",
-      image: natureImage,
+      image: marketsImage,
     },
     {
       icon: Landmark,
@@ -41,7 +44,7 @@ const ThingsToDo = () => {
       icon: Utensils,
       title: "Food Tour",
       description: "Taste traditional Harari dishes like boko, muttaq, and harari tibs. Enjoy home-cooked meals with local families for an authentic food experience.",
-      image: culturalImage,
+      image: foodImage,
     },
     {
       icon: Camera,
