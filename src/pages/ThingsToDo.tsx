@@ -1,10 +1,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import natureImage from "@/assets/harar-alleyway-night.jpg";
+import egileFeedingImage from "@/assets/egile-feeding-harar.jpg";
 import culturalImage from "@/assets/harari-women-ceremony.jpg";
 import coffeeImage from "@/assets/coffee-ceremony-harar.jpg";
 import hyenaImage from "@/assets/hyena-feeding-harar.jpg";
 import marketsImage from "@/assets/harar-markets.jpg";
-import museumImage from "@/assets/harar-historic-archway.jpg";
+import museumImage from "@/assets/harari-traditional-house.jpg";
 import foodImage from "@/assets/harar-traditional-food.jpg";
 import { Coffee, PawPrint, Moon, ShoppingBag, Landmark, Utensils, Camera, Music } from "lucide-react";
 
@@ -20,7 +20,7 @@ const ThingsToDo = () => {
       icon: PawPrint,
       title: "Egile Feeding Experience",
       description: "Visit the Egile feeding area where locals interact with wild animals in harmony. This unique tradition shows the peaceful coexistence between people and nature.",
-      image: natureImage,
+      image: egileFeedingImage,
     },
     {
       icon: Moon,
