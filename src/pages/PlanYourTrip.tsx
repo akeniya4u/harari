@@ -277,7 +277,7 @@ const TourGuidesSection = ({
             </a>
             <a href={`mailto:${guide.email}`} className="flex items-center text-muted-foreground hover:text-primary transition-colors touch-manipulation min-h-[44px]">
               <Mail className="w-4 h-4 mr-2" />
-              <span className="text-sm md:text-base">{guide.email}</span>
+              
             </a>
           </CardContent>
         </Card>)}
